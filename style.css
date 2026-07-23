@@ -97,6 +97,7 @@ nav ul li a:hover{
 }
 
 .hero-text h1{
+    color:#FFFFFF;
     font-size:3rem;
     line-height:1.2;
     margin-bottom:20px;
@@ -109,6 +110,7 @@ nav ul li a:hover{
 }
 
 .hero-text p{
+    color:#E6E6E6;
     font-size:1.1rem;
     line-height:1.8;
     margin-bottom:30px;
