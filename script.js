@@ -126,11 +126,21 @@ let ac15hp = Number(document.getElementById("ac15hp").value);
 
     // Estimated wattage
     let totalWatts =
-        (bulbs * 10) +
-        (fans * 75) +
-        (tvs * 120) +
-        (fridge * 200) +
-        (freezer * 300);
+    (bulbs * 10) +
+    (fans * 60) +
+    (tvs * 120) +
+    (fridge * 150) +
+    (freezer * 250) +
+    (laptop * 65) +
+    (decoder * 25) +
+    (charger * 10) +
+    (cctv * 15) +
+    (desktop * 200) +
+    (pump * 750) +
+    (washing * 500) +
+    (microwave * 1200) +
+    (ac1hp * 900) +
+    (ac15hp * 1200);
 
     let inverter = "";
 
