@@ -267,11 +267,11 @@ nav ul li a:hover{
 }
 
 .why-card h3{
-    color:#003366;
+    color:#FFD700;
 }
 
 .why-card p{
-    color:#555;
+    color:#E6E6E6;
 }
 .process{
     background:#003366;
@@ -898,4 +898,10 @@ nav{
 .calculator-intro .btn{
     display:inline-block;
     margin-top:20px;
+}
+.service-box:hover,
+.why-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.30);
+    border-color:#FFD700;
 }
