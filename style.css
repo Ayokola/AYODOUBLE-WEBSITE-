@@ -51,10 +51,14 @@ nav{
 }
 
 .logo{
-    font-size:28px;
-    font-weight:700;
-    color:#FFD700;
-    letter-spacing:2px;
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
 }
 
 nav ul{
