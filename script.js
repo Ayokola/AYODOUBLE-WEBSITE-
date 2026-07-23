@@ -78,3 +78,25 @@ function scrollToTop() {
     });
 
 }
+// ===== SOLAR CALCULATOR =====
+
+const openCalculator = document.getElementById("openCalculator");
+const calculatorContent = document.getElementById("calculatorContent");
+
+openCalculator.addEventListener("click", function () {
+
+    if (calculatorContent.style.display === "none") {
+
+        calculatorContent.style.display = "block";
+
+        openCalculator.innerHTML = "❌ Close Calculator";
+
+    } else {
+
+        calculatorContent.style.display = "none";
+
+        openCalculator.innerHTML = "🚀 Start Calculator";
+
+    }
+
+});
