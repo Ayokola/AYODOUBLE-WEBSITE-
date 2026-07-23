@@ -74,98 +74,75 @@ nav ul li a:hover{
 }
 
 .hero{
-    padding:70px 20px;
-}
-.CEO-photo{
-    width:300px;
-    max-width:80%;
-    object-fit: cover;
-    height:auto;
-    border-radius:15px;
-    border:5px solid #d4af37;
-    margin-top:40px;
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
-}
-
-.hero{
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:80px;
-    padding:80px 10%;
-    flex-wrap:nowrap;
-}
-
-.hero-image img{
-    width:300px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 8%;
+    min-height:90vh;
+    background:linear-gradient(135deg,#0B1F3A,#123A63);
+    color:#fff;
+    flex-wrap:wrap;
 }
 
 .hero-text{
-    max-width:550px;
-    text-align:left;
+    flex:1;
+    min-width:320px;
+}
+
+.hero-text h4{
+    color:#FFD700;
+    letter-spacing:2px;
+    margin-bottom:10px;
 }
 
 .hero-text h1{
-    font-size:55px;
-    color:#003366;
+    font-size:3rem;
+    line-height:1.2;
+    margin-bottom:20px;
 }
 
 .hero-text h2{
-    color:#d4af37;
-    margin:20px 0;
+    font-size:1.5rem;
+    color:#FFD700;
+    margin-bottom:20px;
 }
 
 .hero-text p{
+    font-size:1.1rem;
     line-height:1.8;
-    font-size:18px;
+    margin-bottom:30px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    background:#003366;
-    color:white;
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:8px;
-    font-weight:bold;
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.btn:hover{
-    background:#d4af37;
-    color:#003366;
-}
-.btn:hover{
-
-background:#003366;
-
-color:white;
-
-transform:translateY(-5px);
-
+.hero-image{
+    flex:1;
+    text-align:center;
 }
 
-.btn:hover{
-    background:#d4af37;
-    color:#003366;
+.hero-image img{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
 .btn-secondary{
-    display:inline-block;
-    background:#d4af37;
-    color:#003366;
-    padding:15px 30px;
-    text-decoration:none;
+    background:#FFD700;
+    color:#0B1F3A;
+    padding:14px 28px;
     border-radius:8px;
+    text-decoration:none;
     font-weight:bold;
-    transition:.3s;
 }
 
 .btn-secondary:hover{
-    background:#003366;
-    color:white;
+    background:#fff;
 }
 
 .services{
