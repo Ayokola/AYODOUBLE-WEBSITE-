@@ -22,9 +22,9 @@ function animateCounter(id, endValue, speed) {
 
 }
 
-animateCounter("project-count", 200, 20);
+animateCounter("project-count", 300, 20);
 
-animateCounter("customers", 150, 25);
+animateCounter("customers", 200, 25);
 
 animateCounter("experience", 5, 300);
 function toggleMenu(){
