@@ -133,7 +133,23 @@ calculateSolar.addEventListener("click", function () {
     } else {
         inverter = "5kVA or above";
     }
+    let hours = Number(document.getElementById("hours").value);
 
+    let dailyEnergy = (totalWatts * hours) / 1000;
+
+    let panels = Math.ceil(dailyEnergy / 2.5);
+
+    let battery = "";
+
+    if (totalWatts <= 800) {
+     battery = "24V 100Ah Lithium";
+} else if (totalWatts <= 1500) {
+    battery = "24V 200Ah Lithium";
+} else if (totalWatts <= 3000) {
+    battery = "48V 100Ah Lithium";
+} else {
+    battery = "48V 200Ah Lithium";
+}
     document.getElementById("result").innerHTML = `
 <div class="result-card">
 
