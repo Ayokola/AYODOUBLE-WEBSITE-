@@ -24,7 +24,7 @@ function animateCounter(id, endValue, speed) {
 
 animateCounter("project-count", 300, 20);
 
-animateCounter("customers", 200, 25);
+animateCounter("customers", 290, 25);
 
 animateCounter("experience", 5, 300);
 function toggleMenu(){
