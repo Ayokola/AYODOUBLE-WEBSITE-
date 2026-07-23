@@ -286,6 +286,15 @@ nav ul li a:hover{
     margin-bottom:20px;
 }
 
+.process h2::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:4px;
+    background:#FFD700;
+    margin:15px auto 0;
+    border-radius:10px;
+}
 .process-container{
     display:grid;
     grid-template-columns:repeat(4,1fr);
