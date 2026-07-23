@@ -914,3 +914,11 @@ nav{
     box-shadow:0 18px 35px rgba(0,0,0,.30);
     border-color:#FFD700;
 }
+.process .btn-secondary{
+    display:inline-block;
+    margin:40px auto 0;
+}
+
+.process{
+    text-align:center;
+}
