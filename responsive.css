@@ -34,3 +34,23 @@
         gap:15px;
     }
 }
+@media (max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:2.2rem;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.hero-image img{
+    max-width:300px;
+}
+
+}
