@@ -211,11 +211,14 @@ nav ul li a:hover{
 }
 
 .service-box{
-    background:#fff;
-    padding:35px;
+    background:#123A63;
+    color:#FFFFFF;
+    border:1px solid #1E4D7A;
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.4s;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:all .3s ease;
 }
 
 .service-box:hover{
