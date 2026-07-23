@@ -78,8 +78,8 @@ nav ul li a:hover{
     align-items:center;
     justify-content:space-between;
     gap:30px;
-    padding:3px 8%;
-    min-height:60vh;
+    padding:80px 8%;
+    min-height:30vh;
     background:linear-gradient(135deg,#0B1F3A,#123A63);
     color:#fff;
     flex-wrap:wrap;
