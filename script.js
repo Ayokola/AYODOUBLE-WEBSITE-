@@ -85,7 +85,10 @@ const calculatorContent = document.getElementById("calculatorContent");
 
 openCalculator.addEventListener("click", function () {
 
-    if (calculatorContent.style.display === "none") {
+    if (
+    calculatorContent.style.display === "none" ||
+    calculatorContent.style.display === ""
+) {
 
         calculatorContent.style.display = "block";
 
