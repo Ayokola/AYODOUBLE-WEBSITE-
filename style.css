@@ -253,11 +253,13 @@ nav ul li a:hover{
 }
 
 .why-card{
-    background:#f8f9fa;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:0.3s;
+    background:#123A63;
+    color:#FFFFFF;
+    border:1px solid #1E4D7A;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:all .3s ease;
 }
 
 .why-card:hover{
