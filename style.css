@@ -78,8 +78,8 @@ nav ul li a:hover{
     align-items:center;
     justify-content:space-between;
     gap:50px;
-    padding:80px 8%;
-    min-height:90vh;
+    padding:40px 8%;
+    min-height:100vh;
     background:linear-gradient(135deg,#0B1F3A,#123A63);
     color:#fff;
     flex-wrap:wrap;
@@ -91,7 +91,7 @@ nav ul li a:hover{
 }
 
 .hero-text h4{
-    color:#FFD700;
+    color:#FFFFFF;
     letter-spacing:2px;
     margin-bottom:10px;
 }
@@ -127,7 +127,7 @@ nav ul li a:hover{
 
 .hero-image img{
     width:100%;
-    max-width:420px;
+    max-width:480px;
     border-radius:20px;
     box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
