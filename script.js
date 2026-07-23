@@ -135,8 +135,20 @@ calculateSolar.addEventListener("click", function () {
     }
 
     document.getElementById("result").innerHTML = `
-        <h3>Estimated Result</h3>
-        <p><strong>Total Load:</strong> ${totalWatts} W</p>
-        <p><strong>Recommended:</strong> ${inverter}</p>
-    `;
+<div class="result-card">
+
+<h3>☀️ Solar Estimate</h3>
+
+<p>⚡ <strong>Total Load:</strong> ${totalWatts} W</p>
+
+<p>🔌 <strong>Recommended Inverter:</strong> ${inverter}</p>
+
+<p>📞 Need a detailed quotation?</p>
+
+<a href="https://wa.me/2348066253620" target="_blank" class="btn">
+💬 Chat with AYODOUBLE
+</a>
+
+</div>
+`;
 });
