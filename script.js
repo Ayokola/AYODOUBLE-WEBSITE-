@@ -103,3 +103,40 @@ openCalculator.addEventListener("click", function () {
     }
 
 });
+
+const calculateSolar = document.getElementById("calculateSolar");
+
+calculateSolar.addEventListener("click", function () {
+
+    let bulbs = Number(document.getElementById("bulbs").value);
+    let fans = Number(document.getElementById("fans").value);
+    let tvs = Number(document.getElementById("tvs").value);
+    let fridge = Number(document.getElementById("fridge").value);
+    let freezer = Number(document.getElementById("freezer").value);
+
+    // Estimated wattage
+    let totalWatts =
+        (bulbs * 10) +
+        (fans * 75) +
+        (tvs * 120) +
+        (fridge * 200) +
+        (freezer * 300);
+
+    let inverter = "";
+
+    if (totalWatts <= 800) {
+        inverter = "1kVA Inverter";
+    } else if (totalWatts <= 1500) {
+        inverter = "1.5kVA Inverter";
+    } else if (totalWatts <= 2500) {
+        inverter = "3kVA Inverter";
+    } else {
+        inverter = "5kVA or above";
+    }
+
+    document.getElementById("result").innerHTML = `
+        <h3>Estimated Result</h3>
+        <p><strong>Total Load:</strong> ${totalWatts} W</p>
+        <p><strong>Recommended:</strong> ${inverter}</p>
+    `;
+});
