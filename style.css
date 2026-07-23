@@ -211,7 +211,7 @@ nav ul li a:hover{
 }
 
 .service-box{
-    background:#123A63;
+    background:#1C4E80;
     color:#FFFFFF;
     border:1px solid #1E4D7A;
     border-radius:15px;
@@ -227,12 +227,12 @@ nav ul li a:hover{
 }
 
 .service-box h3{
-    color:#003366;
+    color:#FFD700;
     margin-bottom:10px;
 }
 
 .service-box p{
-    color:#555;
+    color:#FFFFFF;
 }
 .why-us{
     padding:80px 10%;
@@ -271,7 +271,7 @@ nav ul li a:hover{
 }
 
 .why-card p{
-    color:#E6E6E6;
+    color:#FFFFFF;
 }
 .process{
     background:#003366;
