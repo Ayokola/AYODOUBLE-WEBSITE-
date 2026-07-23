@@ -113,6 +113,16 @@ calculateSolar.addEventListener("click", function () {
     let tvs = Number(document.getElementById("tvs").value);
     let fridge = Number(document.getElementById("fridge").value);
     let freezer = Number(document.getElementById("freezer").value);
+    let laptop = Number(document.getElementById("laptop").value);
+let decoder = Number(document.getElementById("decoder").value);
+let charger = Number(document.getElementById("charger").value);
+let cctv = Number(document.getElementById("cctv").value);
+let desktop = Number(document.getElementById("desktop").value);
+let pump = Number(document.getElementById("pump").value);
+let washing = Number(document.getElementById("washing").value);
+let microwave = Number(document.getElementById("microwave").value);
+let ac1hp = Number(document.getElementById("ac1hp").value);
+let ac15hp = Number(document.getElementById("ac15hp").value);
 
     // Estimated wattage
     let totalWatts =
