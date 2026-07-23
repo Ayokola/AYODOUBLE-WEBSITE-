@@ -886,3 +886,11 @@ nav{
     color:#555;
     line-height:1.7;
 }
+.calculator-intro{
+    text-align:center;
+}
+
+.calculator-intro .btn{
+    display:inline-block;
+    margin-top:20px;
+}
