@@ -143,6 +143,12 @@ calculateSolar.addEventListener("click", function () {
 
 <p>🔌 <strong>Recommended Inverter:</strong> ${inverter}</p>
 
+<p>🔋 <strong>Recommended Battery:</strong> ${battery}</p>
+
+<p>☀️ <strong>550W Solar Panels:</strong> ${panels}</p>
+
+<p>⚡ <strong>Estimated Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+
 <p>📞 Need a detailed quotation?</p>
 
 <a href="https://wa.me/2348066253620" target="_blank" class="btn">
