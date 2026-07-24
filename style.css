@@ -38,28 +38,18 @@ p{
 /* Navigation */
 
 nav{
-    position:sticky;
-    top:0;
-    width:100%;
-    background:#0B1F3A;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
-    z-index:1000;
+    padding:15px 20px;
+    background:#0B1F3A;
     box-sizing:border-box;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-}
-
 .logo img{
-    width:180px;
+    width:240px;
+    max-width:70%;
     height:auto;
-    display:block;
 }
 
 nav ul{
@@ -99,6 +89,9 @@ nav ul li a:hover{
     align-items:center;
     flex-wrap:wrap;
     overflow:hidden;
+    background:linear-gradient(135deg,#0B1F3A,#123A63);
+    color:#fff;
+    padding:60px 8%;
 }
 
 .hero-text{
@@ -599,9 +592,9 @@ nav{
     text-decoration:none;
 }
 .menu-icon{
-    display:none;
-    color:white;
-    font-size:30px;
+    display:block;
+    font-size:38px;
+    color:#fff;
     cursor:pointer;
 }
 
