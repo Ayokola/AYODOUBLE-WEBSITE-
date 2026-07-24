@@ -170,6 +170,17 @@ let ac15hp = Number(document.getElementById("ac15hp").value);
 } else {
     battery = "48V 200Ah Lithium";
 }
+    let price = "";
+
+if (totalWatts <= 800) {
+    price = "₦1,200,000 - ₦1,600,000";
+} else if (totalWatts <= 1500) {
+    price = "₦1,800,000 - ₦2,500,000";
+} else if (totalWatts <= 3000) {
+    price = "₦3,000,000 - ₦4,500,000";
+} else {
+    price = "Request a Custom Quote";
+}
     document.getElementById("loading").style.display = "block";
 document.getElementById("result").style.display = "none";
 
