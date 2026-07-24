@@ -195,8 +195,21 @@ setTimeout(function(){
 
 <p>📞 Need a detailed quotation?</p>
 
-<a href="https://wa.me/2348066253620" target="_blank" class="btn">
-💬 Chat with AYODOUBLE
+<a href="https://wa.me/2348066253620?text=${encodeURIComponent(
+`Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
+
+I used your Solar Calculator and I would like a quotation.
+
+⚡ Total Load: ${totalWatts}W
+🔌 Recommended Inverter: ${inverter}
+🔋 Recommended Battery: ${battery}
+☀️ 550W Solar Panels: ${panels}
+⚡ Estimated Daily Energy: ${dailyEnergy.toFixed(2)} kWh/day`
+
+)}" target="_blank" class="btn">
+
+💬 Get My Free Quotation
+
 </a>
 
 </div>
