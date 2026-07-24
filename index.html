@@ -158,49 +158,185 @@ Solar Calculator
 
     <h3>Select Your Appliances</h3>
 
-<label>💡 LED Bulbs</label>
-<input type="number" id="bulbs" min="0" value="0">
+<div class="appliance-card">
+    <span>💡 LED Bulbs</span>
 
-<label>🌀 Fans</label>
-<input type="number" id="fans" min="0" value="0">
+    <div class="counter">
+        <button type="button" onclick="changeValue('bulbs',-1)">−</button>
 
-<label>📺 TVs</label>
-<input type="number" id="tvs" min="0" value="0">
+        <input type="number" id="bulbs" value="0" min="0" readonly>
 
-<label>❄️ Refrigerator</label>
-<input type="number" id="fridge" min="0" value="0">
+        <button type="button" onclick="changeValue('bulbs',1)">+</button>
+    </div>
+</div>
 
-<label>🧊 Freezer</label>
-<input type="number" id="freezer" min="0" value="0">
-<label>💻 Laptop</label>
-<input type="number" id="laptop" min="0" value="0">
+<div class="appliance-card">
+    <span>🌀 Fans</span>
 
-<label>📡 Decoder</label>
-<input type="number" id="decoder" min="0" value="0">
+    <div class="counter">
+        <button type="button" onclick="changeValue('fans',-1)">−</button>
 
-<label>📱 Phone Chargers</label>
-<input type="number" id="charger" min="0" value="0">
+        <input type="number" id="fans" value="0" min="0" readonly>
 
-<label>📷 CCTV Cameras</label>
-<input type="number" id="cctv" min="0" value="0">
+        <button type="button" onclick="changeValue('fans',1)">+</button>
+    </div>
+</div>
 
-<label>🖥️ Desktop Computers</label>
-<input type="number" id="desktop" min="0" value="0">
+<div class="appliance-card">
+    <span>📺 TVs</span>
 
-<label>🌊 Water Pump</label>
-<input type="number" id="pump" min="0" value="0">
+    <div class="counter">
+        <button type="button" onclick="changeValue('tvs',-1)">−</button>
 
-<label>🧺 Washing Machine</label>
-<input type="number" id="washing" min="0" value="0">
+        <input type="number" id="tvs" value="0" min="0" readonly>
 
-<label>🍲 Microwave</label>
-<input type="number" id="microwave" min="0" value="0">
+        <button type="button" onclick="changeValue('tvs',1)">+</button>
+    </div>
+</div>
 
-<label>❄️ 1HP Air Conditioner</label>
-<input type="number" id="ac1hp" min="0" value="0">
+<div class="appliance-card">
+    <span>❄️ Refrigerator</span>
 
-<label>❄️ 1.5HP Air Conditioner</label>
-<input type="number" id="ac15hp" min="0" value="0">
+    <div class="counter">
+        <button type="button" onclick="changeValue('fridge',-1)">−</button>
+
+        <input type="number" id="fridge" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('fridge',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🧊 Freezer</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('freezer',-1)">−</button>
+
+        <input type="number" id="freezer" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('freezer',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>💻 Laptop</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('laptop',-1)">−</button>
+
+        <input type="number" id="laptop" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('laptop',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📡 Decoder</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('decoder',-1)">−</button>
+
+        <input type="number" id="decoder" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('decoder',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📱 Phone Chargers</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('charger',-1)">−</button>
+
+        <input type="number" id="charger" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('charger',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📷 CCTV Cameras</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('cctv',-1)">−</button>
+
+        <input type="number" id="cctv" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('cctv',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🖥️ Desktop Computers</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('desktop',-1)">−</button>
+
+        <input type="number" id="desktop" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('desktop',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🌊 Water Pump</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('pump',-1)">−</button>
+
+        <input type="number" id="pump" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('pump',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🧺 Washing Machine</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('washing',-1)">−</button>
+
+        <input type="number" id="washing" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('washing',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🍲 Microwave</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('microwave',-1)">−</button>
+
+        <input type="number" id="microwave" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('microwave',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>❄️ 1HP Air Conditioner</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('ac1hp',-1)">−</button>
+
+        <input type="number" id="ac1hp" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('ac1hp',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>❄️ 1.5HP Air Conditioner</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('ac15hp',-1)">−</button>
+
+        <input type="number" id="ac15hp" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('ac15hp',1)">+</button>
+    </div>
+</div>
 
 <label>⏰ Average Usage Hours Per Day</label>
 <input type="number" id="hours" min="1" max="24" value="8">
