@@ -94,14 +94,10 @@ nav ul li a:hover{
 
 .hero{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:30px;
-    padding:2px 8%;
-    min-height:80vh;
-    background:linear-gradient(135deg,#0B1F3A,#123A63);
-    color:#fff;
+    align-items:center;
     flex-wrap:wrap;
+    overflow:hidden;
 }
 
 .hero-text{
@@ -921,4 +917,8 @@ nav{
 
 .process{
     text-align:center;
+}
+html, body{
+    overflow-x:hidden;
+    width:100%;
 }
