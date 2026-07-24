@@ -232,6 +232,37 @@ I used your Solar Calculator and I would like a quotation.
 `;
 
 }, 1000);
+    const { jsPDF } = window.jspdf;
+
+document.getElementById("downloadPDF").addEventListener("click", function () {
+
+    const doc = new jsPDF();
+
+    doc.setFontSize(20);
+    doc.text("AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS", 15, 20);
+
+    doc.setFontSize(14);
+    doc.text("Solar System Estimate", 15, 35);
+
+    doc.setFontSize(12);
+
+    doc.text("Total Load: " + totalWatts + " W",15,55);
+    doc.text("Recommended Inverter: " + inverter,15,65);
+    doc.text("Recommended Battery: " + battery,15,75);
+    doc.text("550W Solar Panels: " + panels,15,85);
+    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day",15,95);
+    doc.text("Estimated Cost: " + price,15,105);
+
+    doc.text("Phone: 08066253620",15,125);
+    doc.text("Email: oyeyemiayokola@gmail.com",15,135);
+
+    doc.setFontSize(10);
+
+    doc.text("Prepared by AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS",15,155);
+
+    doc.save("AYODOUBLE-Solar-Estimate.pdf");
+
+});
 });
 function changeValue(id, change){
 
