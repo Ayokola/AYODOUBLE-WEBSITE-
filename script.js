@@ -233,36 +233,58 @@ I used your Solar Calculator and I would like a quotation.
 
 }, 1000);
     const { jsPDF } = window.jspdf;
+    // Company title
+// Header
+doc.setFillColor(11,31,58);
+doc.rect(0,0,210,30,"F");
 
-document.getElementById("downloadPDF").addEventListener("click", function () {
+doc.setTextColor(255,215,0);
+doc.setFont("helvetica","bold");
+doc.setFontSize(20);
+doc.text("AYODOUBLE",105,14,{align:"center"});
 
-    const doc = new jsPDF();
+doc.setFontSize(11);
+doc.text("Electrical & Solar Energy Solutions",105,22,{align:"center"});
 
-    doc.setFontSize(20);
-    doc.text("AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS", 15, 20);
+// Date & Quote Number
+const today = new Date().toLocaleDateString();
+const quoteNo = "AYO-" + Date.now().toString().slice(-6);
 
-    doc.setFontSize(14);
-    doc.text("Solar System Estimate", 15, 35);
+doc.setTextColor(0,0,0);
+doc.setFont("helvetica","normal");
+doc.setFontSize(11);
 
-    doc.setFontSize(12);
+doc.text("Date: " + today,15,40);
+doc.text("Quotation No: " + quoteNo,15,48);
 
-    doc.text("Total Load: " + totalWatts + " W",15,55);
-    doc.text("Recommended Inverter: " + inverter,15,65);
-    doc.text("Recommended Battery: " + battery,15,75);
-    doc.text("550W Solar Panels: " + panels,15,85);
-    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day",15,95);
-    doc.text("Estimated Cost: " + price,15,105);
+// Title
+doc.setFont("helvetica","bold");
+doc.setFontSize(15);
+doc.text("SOLAR SYSTEM ESTIMATE",15,65);
 
-    doc.text("Phone: 08066253620",15,125);
-    doc.text("Email: oyeyemiayokola@gmail.com",15,135);
+// Details
+doc.setFont("helvetica","normal");
+doc.setFontSize(11);
 
-    doc.setFontSize(10);
+doc.text("⚡ Total Load: " + totalWatts + " W",20,80);
+doc.text("🔌 Recommended Inverter: " + inverter,20,90);
+doc.text("🔋 Recommended Battery: " + battery,20,100);
+doc.text("☀ 550W Solar Panels: " + panels + " × 550W",20,110);
+doc.text("⚡ Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day",20,120);
+doc.text("💰 Estimated Cost: " + price,20,130);
 
-    doc.text("Prepared by AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS",15,155);
+// Contact
+doc.text("Phone: 08066253620",20,150);
+doc.text("Email: oyeyemiayokola@gmail.com",20,160);
 
-    doc.save("AYODOUBLE-Solar-Estimate.pdf");
+// Footer
+doc.setDrawColor(11,31,58);
+doc.line(15,250,195,250);
 
-});
+doc.setFont("helvetica","bold");
+doc.text("Prepared by AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS",105,265,{align:"center"});
+
+doc.save("AYODOUBLE-Solar-Estimate.pdf");
 });
 function changeValue(id, change){
 
