@@ -592,13 +592,26 @@ nav{
     text-decoration:none;
 }
 .menu-icon{
-    display:block;
-    font-size:38px;
+    display:none;
+    font-size:32px;
     color:#fff;
     cursor:pointer;
+    margin-left:auto;
 }
 
 @media (max-width:768px){
+       .menu-icon{
+    display:block;
+}
+
+nav{
+    justify-content:space-between;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+}
      .services-container{
     grid-template-columns:1fr;
 }
