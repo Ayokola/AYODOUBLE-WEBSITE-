@@ -602,7 +602,14 @@ nav{
      .services-container{
     grid-template-columns:1fr;
 }
+.process-container{
+    grid-template-columns:1fr;
+    gap:20px;
+}
 
+.step{
+    width:100%;
+}
 .service-box{
     width:100%;
 }
