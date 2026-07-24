@@ -170,6 +170,14 @@ let ac15hp = Number(document.getElementById("ac15hp").value);
 } else {
     battery = "48V 200Ah Lithium";
 }
+    document.getElementById("loading").style.display = "block";
+document.getElementById("result").style.display = "none";
+
+setTimeout(function(){
+
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("result").style.display = "block";
+
     document.getElementById("result").innerHTML = `
 <div class="result-card">
 
@@ -193,6 +201,8 @@ let ac15hp = Number(document.getElementById("ac15hp").value);
 
 </div>
 `;
+
+}, 1000);
 });
 function changeValue(id, change){
 
