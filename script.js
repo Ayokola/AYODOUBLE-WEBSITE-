@@ -194,3 +194,17 @@ let ac15hp = Number(document.getElementById("ac15hp").value);
 </div>
 `;
 });
+function changeValue(id, change){
+
+    let input = document.getElementById(id);
+
+    let value = Number(input.value);
+
+    value += change;
+
+    if(value < 0){
+        value = 0;
+    }
+
+    input.value = value;
+}
