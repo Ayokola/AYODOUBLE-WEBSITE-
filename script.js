@@ -190,6 +190,7 @@ setTimeout(function(){
     document.getElementById("result").style.display = "block";
 
     document.getElementById("result").innerHTML = `
+    document.getElementById("downloadPDF").addEventListener(...)
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -232,59 +233,69 @@ I used your Solar Calculator and I would like a quotation.
 `;
 
 }, 1000);
+// PDF Download Button
+document.getElementById("downloadPDF").addEventListener("click", function () {
+
     const { jsPDF } = window.jspdf;
-    // Company title
-// Header
-doc.setFillColor(11,31,58);
-doc.rect(0,0,210,30,"F");
+    const doc = new jsPDF();
 
-doc.setTextColor(255,215,0);
-doc.setFont("helvetica","bold");
-doc.setFontSize(20);
-doc.text("AYODOUBLE",105,14,{align:"center"});
+    // ===== Header =====
+    doc.setFillColor(11,31,58);
+    doc.rect(0,0,210,30,"F");
 
-doc.setFontSize(11);
-doc.text("Electrical & Solar Energy Solutions",105,22,{align:"center"});
+    doc.setTextColor(255,215,0);
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(20);
+    doc.text("AYODOUBLE",105,14,{align:"center"});
 
-// Date & Quote Number
-const today = new Date().toLocaleDateString();
-const quoteNo = "AYO-" + Date.now().toString().slice(-6);
+    doc.setFontSize(11);
+    doc.text("Electrical & Solar Energy Solutions",105,22,{align:"center"});
 
-doc.setTextColor(0,0,0);
-doc.setFont("helvetica","normal");
-doc.setFontSize(11);
+    // ===== Date =====
+    const today = new Date().toLocaleDateString();
+    const quoteNo = "AYO-" + Date.now().toString().slice(-6);
 
-doc.text("Date: " + today,15,40);
-doc.text("Quotation No: " + quoteNo,15,48);
+    doc.setTextColor(0,0,0);
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(11);
 
-// Title
-doc.setFont("helvetica","bold");
-doc.setFontSize(15);
-doc.text("SOLAR SYSTEM ESTIMATE",15,65);
+    doc.text("Date: " + today,15,40);
+    doc.text("Quotation No: " + quoteNo,15,48);
 
-// Details
-doc.setFont("helvetica","normal");
-doc.setFontSize(11);
+    // ===== Title =====
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(15);
+    doc.text("SOLAR SYSTEM ESTIMATE",15,65);
 
-doc.text("⚡ Total Load: " + totalWatts + " W",20,80);
-doc.text("🔌 Recommended Inverter: " + inverter,20,90);
-doc.text("🔋 Recommended Battery: " + battery,20,100);
-doc.text("☀ 550W Solar Panels: " + panels + " × 550W",20,110);
-doc.text("⚡ Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day",20,120);
-doc.text("💰 Estimated Cost: " + price,20,130);
+    // ===== Results =====
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(11);
 
-// Contact
-doc.text("Phone: 08066253620",20,150);
-doc.text("Email: oyeyemiayokola@gmail.com",20,160);
+    doc.text("Total Load: " + totalWatts + " W",20,80);
+    doc.text("Recommended Inverter: " + inverter,20,90);
+    doc.text("Recommended Battery: " + battery,20,100);
+    doc.text("550W Solar Panels: " + panels + " x 550W",20,110);
+    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day",20,120);
+    doc.text("Estimated Cost: " + price,20,130);
 
-// Footer
-doc.setDrawColor(11,31,58);
-doc.line(15,250,195,250);
+    // ===== Contact =====
+    doc.text("Phone: 08066253620",20,150);
+    doc.text("Email: oyeyemiayokola@gmail.com",20,160);
 
-doc.setFont("helvetica","bold");
-doc.text("Prepared by AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS",105,265,{align:"center"});
+    // ===== Footer =====
+    doc.setDrawColor(11,31,58);
+    doc.line(15,250,195,250);
 
-doc.save("AYODOUBLE-Solar-Estimate.pdf");
+    doc.setFont("helvetica","bold");
+    doc.text(
+        "Prepared by AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS",
+        105,
+        265,
+        { align:"center" }
+    );
+
+    doc.save("AYODOUBLE-Solar-Estimate.pdf");
+
 });
 function changeValue(id, change){
 
