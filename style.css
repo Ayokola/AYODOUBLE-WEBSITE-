@@ -1031,3 +1031,44 @@ img{
 .result-card strong{
     color:#FFD700;
 }
+.appliance-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f8f9fb;
+    padding:15px 20px;
+    margin-bottom:15px;
+    border-radius:12px;
+    border:1px solid #ddd;
+}
+
+.counter{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.counter button{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#003366;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.counter button:hover{
+    background:#FFD700;
+    color:#003366;
+}
+
+.counter input{
+    width:55px;
+    text-align:center;
+    border:none;
+    background:transparent;
+    font-size:20px;
+    font-weight:bold;
+}
