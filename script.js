@@ -203,7 +203,7 @@ setTimeout(function(){
 <p>☀️ <strong>550W Solar Panels:</strong> ${panels}</p>
 
 <p>⚡ <strong>Estimated Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
-
+<p>💰 <strong>Estimated Installation Cost:</strong> ${price}</p>
 <p>📞 Need a detailed quotation?</p>
 
 <a href="https://wa.me/2348066253620?text=${encodeURIComponent(
