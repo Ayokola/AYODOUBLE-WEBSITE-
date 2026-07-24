@@ -599,7 +599,13 @@ nav{
 }
 
 @media (max-width:768px){
+     .services-container{
+    grid-template-columns:1fr;
+}
 
+.service-box{
+    width:100%;
+}
     .menu-icon{
         display:block;
     }
