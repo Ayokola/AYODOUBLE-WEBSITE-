@@ -205,6 +205,11 @@ setTimeout(function(){
 <p>⚡ <strong>Estimated Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
 <p>💰 <strong>Estimated Installation Cost:</strong> ${price}</p>
 <p>📞 Need a detailed quotation?</p>
+<button id="downloadPDF" class="btn-secondary">
+📄 Download PDF Estimate
+</button>
+
+<br><br>
 
 <a href="https://wa.me/2348066253620?text=${encodeURIComponent(
 `Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
