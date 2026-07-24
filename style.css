@@ -1072,16 +1072,31 @@ img{
     font-size:20px;
     font-weight:bold;
 }
-document.getElementById("loading").style.display = "block";
-document.getElementById("result").style.display = "none";
+/* Loading Animation */
 
-setTimeout(function(){
+.loading-box{
+    text-align:center;
+    padding:30px;
+}
 
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("result").style.display = "block";
+.spinner{
+    width:60px;
+    height:60px;
+    margin:20px auto;
+    border:6px solid #e5e5e5;
+    border-top:6px solid #FFD700;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
 
-    document.getElementById("result").innerHTML = `
-        <!-- Put your current result-card HTML here -->
-    `;
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
 
-},1000);
+.loading-box p{
+    color:#003366;
+    font-size:18px;
+    font-weight:bold;
+}
