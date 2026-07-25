@@ -288,3 +288,160 @@ font-size:1rem;
 }
 
 }
+/* ===========================
+   Premium Services Section
+=========================== */
+
+.services{
+
+padding:80px 20px;
+
+background:#f8f9fa;
+
+}
+
+
+.services-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+
+.services-title h2{
+
+font-size:2.5rem;
+
+color:#003366;
+
+font-weight:800;
+
+}
+
+
+.services-title h2 span{
+
+color:#FFD700;
+
+}
+
+
+.services-title p{
+
+color:#555;
+
+font-size:1.1rem;
+
+}
+
+
+
+/* Service Cards */
+
+.service-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+.service-card{
+
+background:white;
+
+padding:35px 25px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+border-top:5px solid #FFD700;
+
+}
+
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+
+.service-card h3{
+
+color:#003366;
+
+margin:20px 0 15px;
+
+font-size:1.3rem;
+
+}
+
+
+.service-card p{
+
+color:#555;
+
+line-height:1.7;
+
+}
+
+
+.service-icon{
+
+width:70px;
+
+height:70px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#003366;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:35px;
+
+color:#FFD700;
+
+}
+
+
+/* Mobile Services */
+
+@media(max-width:768px){
+
+.services-title h2{
+
+font-size:2rem;
+
+}
+
+.service-card{
+
+padding:25px 20px;
+
+}
+
+}
