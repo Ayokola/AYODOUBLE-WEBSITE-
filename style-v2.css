@@ -583,3 +583,149 @@ font-size:2rem;
 }
 
 }
+/* ===========================
+   Why Choose Us Section
+=========================== */
+
+.why-us{
+
+padding:90px 20px;
+
+background:#003366;
+
+color:white;
+
+}
+
+
+.why-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+
+.why-title h2{
+
+font-size:2.5rem;
+
+font-weight:800;
+
+}
+
+
+.why-title h2 span{
+
+color:#FFD700;
+
+}
+
+
+.why-title p{
+
+font-size:1.1rem;
+
+opacity:.9;
+
+}
+
+
+
+/* Why Cards */
+
+.why-container{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+
+.why-card{
+
+background:white;
+
+color:#333;
+
+padding:35px 25px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+
+.why-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+.why-icon{
+
+width:75px;
+
+height:75px;
+
+background:#FFD700;
+
+color:#003366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:35px;
+
+margin:auto;
+
+}
+
+
+.why-card h3{
+
+color:#003366;
+
+margin:20px 0 15px;
+
+}
+
+
+.why-card p{
+
+line-height:1.7;
+
+color:#555;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.why-title h2{
+
+font-size:2rem;
+
+}
+
+}
