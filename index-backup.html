@@ -1,1 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-v2.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+</head>
+
+<body>
+
+<header>
+   <nav>
+
+    <a href="#home" class="logo">
+    <img src="logo.png" alt="AYODOUBLE Logo">
+</a>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div id="nav-links" class="nav-links">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>        
+            <li><a href="#contact us">Contact us</a></li>
+        </ul>
+
+    </div>
+    
+    </nav>
+</header>
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<h4>WELCOME TO</h4>
+
+<h1>AYODOUBLE ELECTRICAL<br>AND SOLAR ENERGY SOLUTIONS</h1>
+
+<h2>Powering Homes. Empowering Businesses.</h2>
+
+<p>
+We provide professional Solar Installation,
+Inverter Systems, CCTV Installation,
+Electrical Wiring and Energy Consultation across Nigeria.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn">
+Get Free Quote
+</a>
+
+<a href="#calculator" class="btn-secondary">
+Solar Calculator
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="CEO.jpg" alt="CEO">
+
+</div>
+
+</section>
+
+
+<section id="services" class="services hidden">
+
+    <div class="services-title">
+
+<h2>Our <span>Services</span></h2>
+
+<p>Professional electrical and solar solutions designed for homes and businesses.</p>
+
+</div>
+    
+    <div class="service-container">
+      
+    <div class="service-card">
+
+<div class="service-icon">
+☀
+</div>
+
+<h3>Solar Installation</h3>
+
+<p>Professional solar systems for homes and businesses.</p>
+
+</div>
+
+    <div class="service-card">
+        <div class="service-icon">
+        🔋
+        </div>
+            <h3>Inveter System</h3>
+        <p>Reliable inverter and battery backup solutions.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">
+        ⚡
+        </div>
+        <h3>Electrical Wiring</h3>
+        <p>Safe and standard electrical installations.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">
+        📹
+        </div>
+        <h3>Cctv Installations</h3>
+        <p>Modern security camera systems for homes and offices.</p>
+    </div>
+        
+    </div>
+</section>
+
+<section id="why" class="why-us">
+
+<div class="why-title">
+
+<h2>Why Choose <span>AYODOUBLE?</span></h2>
+
+<p>
+Reliable power solutions built with quality, honesty and professionalism.
+</p>
+
+</div>
+
+<div class="why-container">
+
+<div class="why-card">
+    <div class="why-icon">
+  ☀️
+    </div>
+ <h3>Premium Solar Solutions</h3>
+<p>High-quality solar panels, inverters and lithium batteries designed for long-lasting performance.</p>
+</div>
+
+<div class="why-card">
+    <div class="why-icon">
+    👨‍🔧
+    </div>
+    <h3>Professional Installation</h3>
+<p>Installed by experienced technicians with neat, safe and standard workmanship.</p>
+</div>
+
+<div class="why-card">
+     <div class="why-icon">
+    🛡️
+     </div>
+    <h3>Quality Guarantee</h3>
+<p>We use trusted products backed by manufacturer warranties and reliable after-sales support.</p>
+</div>
+
+<div class="why-card">
+     <div class="why-icon">
+    📞
+     </div>
+    <h3>Fast Customer Support</h3>
+<p>Quick response, honest advice and dependable support before and after installation.</p>
+</div>
+
+</div>
+
+</section>
+<section id="calculator" class="calculator-intro">
+
+    <h2>☀️ Solar System Calculator</h2>
+
+    <p>
+        Estimate the perfect solar system for your home or business in less than one minute.
+    </p>
+
+    <button id="openCalculator" class="btn">
+        🚀 Start Calculator
+    </button>
+
+</section>
+
+<div id="calculatorContent" class="calculator-card" style="display:none;">
+
+    <h3>Select Your Appliances</h3>
+
+<div class="appliance-card">
+    <span>💡 LED Bulbs</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('bulbs',-1)">−</button>
+
+        <input type="number" id="bulbs" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('bulbs',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🌀 Fans</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('fans',-1)">−</button>
+
+        <input type="number" id="fans" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('fans',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📺 TVs</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('tvs',-1)">−</button>
+
+        <input type="number" id="tvs" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('tvs',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>❄️ Refrigerator</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('fridge',-1)">−</button>
+
+        <input type="number" id="fridge" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('fridge',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🧊 Freezer</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('freezer',-1)">−</button>
+
+        <input type="number" id="freezer" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('freezer',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>💻 Laptop</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('laptop',-1)">−</button>
+
+        <input type="number" id="laptop" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('laptop',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📡 Decoder</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('decoder',-1)">−</button>
+
+        <input type="number" id="decoder" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('decoder',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📱 Phone Chargers</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('charger',-1)">−</button>
+
+        <input type="number" id="charger" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('charger',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>📷 CCTV Cameras</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('cctv',-1)">−</button>
+
+        <input type="number" id="cctv" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('cctv',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🖥️ Desktop Computers</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('desktop',-1)">−</button>
+
+        <input type="number" id="desktop" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('desktop',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🌊 Water Pump</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('pump',-1)">−</button>
+
+        <input type="number" id="pump" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('pump',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🧺 Washing Machine</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('washing',-1)">−</button>
+
+        <input type="number" id="washing" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('washing',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>🍲 Microwave</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('microwave',-1)">−</button>
+
+        <input type="number" id="microwave" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('microwave',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>❄️ 1HP Air Conditioner</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('ac1hp',-1)">−</button>
+
+        <input type="number" id="ac1hp" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('ac1hp',1)">+</button>
+    </div>
+</div>
+
+<div class="appliance-card">
+    <span>❄️ 1.5HP Air Conditioner</span>
+
+    <div class="counter">
+        <button type="button" onclick="changeValue('ac15hp',-1)">−</button>
+
+        <input type="number" id="ac15hp" value="0" min="0" readonly>
+
+        <button type="button" onclick="changeValue('ac15hp',1)">+</button>
+    </div>
+</div>
+
+<label>⏰ Average Usage Hours Per Day</label>
+<input type="number" id="hours" min="1" max="24" value="8">
+<button id="calculateSolar" class="btn">
+    Calculate My Solar System
+</button>
+<div id="loading" style="display:none;" class="loading-box">
+    <div class="spinner"></div>
+    <p>⚡ Calculating your perfect solar system...</p>
+</div>
+
+<div id="result"></div>
+<section class="packages hidden">
+
+<h2>☀️ Our Solar Packages</h2>
+
+<p>Choose the package that best suits your home or business.</p>
+
+<div class="package-container">
+
+<div class="package-card">
+<h3>🥉 Basic Package</h3>
+
+<p>✅ 1kVA Pure Sine Wave Inverter</p>
+<p>✅ 24V 100Ah Lithium Battery</p>
+<p>✅ 2 × 550W Solar Panels</p>
+<p>✅ Installation Included</p>
+
+<a href="https://wa.me/2348066253620?text=Hello AYODOUBLE, I am interested in your Basic Solar Package." class="btn">
+Get This Package
+</a>
+
+</div>
+
+<div class="package-card featured">
+
+<h3>🥈 Standard Package</h3>
+
+<p>✅ 2kVA Pure Sine Wave Inverter</p>
+<p>✅ 24V 200Ah Lithium Battery</p>
+<p>✅ 4 × 550W Solar Panels</p>
+<p>✅ Installation Included</p>
+
+<a href="https://wa.me/2348066253620?text=Hello AYODOUBLE, I am interested in your Standard Solar Package." class="btn">
+Get This Package
+</a>
+
+</div>
+
+<div class="package-card">
+
+<h3>🥇 Premium Package</h3>
+
+<p>✅ 3kVA Pure Sine Wave Inverter</p>
+<p>✅ 48V 100Ah Lithium Battery</p>
+<p>✅ 6 × 550W Solar Panels</p>
+<p>✅ Installation Included</p>
+
+<a href="https://wa.me/2348066253620?text=Hello AYODOUBLE, I am interested in your Premium Solar Package." class="btn">
+Get This Package
+</a>
+
+</div>
+<section class="gallery hidden">
+
+<h2>Our Recent Installations</h2>
+
+<p>Some of our completed electrical and solar energy projects.</p>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="project1.jpg" alt="Solar Installation">
+</div>
+
+<div class="gallery-item">
+<img src="project2.jpg" alt="Inverter Installation">
+</div>
+
+<div class="gallery-item">
+<img src="project3.jpg" alt="Electrical Wiring">
+</div>
+
+<div class="gallery-item">
+<img src="project4.jpg" alt="CCTV Installation">
+</div>
+
+<div class="gallery-item">
+<img src="project5.jpg" alt="Solar Battery">
+</div>
+
+<div class="gallery-item">
+<img src="project6.jpg" alt="Completed Project">
+</div>
+
+</div>
+
+</section>
+</div>
+
+</section>
+</div>
+
+
+<section class="why-us"> 
+    <section class="process">
+    <div class="process-container">
+
+        <div class="step">
+            <h3>1️⃣ Consultation</h3>
+            <p>We understand your energy needs and recommend the best solution.</p>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Site Inspection</h3>
+            <p>We inspect your property and prepare a professional installation plan.</p>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ Installation</h3>
+            <p>Our experienced team installs your system neatly and professionally.</p>
+        </div>
+
+        <div class="step">
+            <h3>4️⃣ Support</h3>
+            <p>We provide after-sales support to ensure your system performs at its best.</p>
+        </div>
+
+    </div>
+<section class="process hidden">
+
+<h2>Our Simple Process</h2>
+
+<div class="process-container">
+
+    <div class="process-card">
+        ...
+    </div>
+
+    <div class="process-card">
+        ...
+    </div>
+
+    <div class="process-card">
+        ...
+    </div>
+
+    <div class="process-card">
+        ...
+    </div>
+
+</div>
+
+<a href="#contact" class="btn-secondary">
+    Get Your Free Consultation
+</a>
+
+</section>
+</section>
+
+<section id="about" class="about">
+    <div class="about-container">
+    <div class="about-image">
+       
+            <img src="CEO.jpg" alt="CEO of AYODOUBLE">
+    </div>
+
+    <div class="about-content">
+
+        <h2>About AYODOUBLE</h2>
+
+        <p>
+            AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS was founded with one clear mission:
+            to help Nigerian homes and businesses overcome the challenge of unreliable electricity
+            through dependable solar and electrical solutions.
+        </p>
+
+        <p>
+            Our greatest strength is our commitment to honesty, professionalism and proper planning.
+            We believe in recommending quality products that will serve our customers for many years,
+            rather than offering cheap alternatives that may fail quickly.
+        </p>
+
+        <p>
+            Every installation is carried out with care, attention to detail and a commitment to customer satisfaction.
+            At AYODOUBLE, we don't just install systems—we build lasting relationships based on trust.
+        </p>
+
+    </div>
+
+</section>
+
+</section>
+<section id="projects" class="projects">
+
+    <div class="project-title">
+
+<h2>Our <span>Recent Projects</span></h2>
+
+<p>
+Some of our completed solar and electrical installations.
+</p>
+
+</div>
+
+    <div class="projects-gallery">
+
+        <div class="project-card">
+            <img src="project1.jpg" alt="Solar Installation">
+            <div class="project-info">
+            <h3>Solar Installation</h3>
+            <p>Professional solar power installation for uninterrupted electricity.</p>
+        </div>
+        </div>
+
+        <div class="project-card">
+            <img src="project2.jpg" alt="Inverter Installation">
+            <div class="project-info">
+            <h3>Inverter System</h3>
+            <p>Reliable inverter and battery backup installation.</p>
+        </div>
+        </div>
+
+        <div class="project-card">
+            <img src="project3.jpg" alt="Electrical Wiring">
+            <div class="project-info">
+            <h3>Electrical Wiring</h3>
+            <p>Safe and professional electrical wiring services.</p>
+        </div>
+        </div>
+
+        <div class="project-card">
+            <img src="project4.jpg" alt="CCTV Installation">
+            <div class="project-info">
+            <h3>CCTV Installation</h3>
+            <p>Modern surveillance systems for homes and businesses.</p>
+        </div>
+        </div>
+
+        <div class="project-card">
+            <img src="project5.jpg" alt="Street Light">
+            <div class="project-info">
+            <h3>Street Light Installation</h3>
+            <p>Quality street lighting solutions for estates and communities.</p>
+        </div>
+        </div>
+        <div class="project-card">
+            <img src="project6.jpg" alt="Electric Fence">
+            <div class="project-info">
+            <h3>Electric Fence</h3>
+            <p>Secure and dependable electric fence installation.</p>
+        </div>
+    </div>
+
+    </div>
+
+</section>
+<section class="stats">
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="250">0</h2>
+        <p>Projects Completed</p>
+    </div>
+    <div class="stat-box">
+        <h2 class="counter" data-target="250">0</h2>
+        <p>Happy Customers</p>
+    </div>
+
+    <div class="stat-box">
+       <h2 class="counter" data-target="6">0</h2>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat-box">
+     <h2>24/7</h2>
+        <p>Customer Support</p>
+    </div>
+
+</section>
+<section class="testimonials">
+
+    <div class="testimonial-title">
+
+<h2>What Our <span>Customers Say</span></h2>
+
+<p>
+Trusted by homes and businesses through quality electrical and solar solutions.
+</p>
+
+</div>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>
+                "AYODOUBLE installed my solar system professionally.
+                Their workmanship was neat and they explained everything clearly.
+                I highly recommend them."
+            </p>
+
+            <h4>★★★★★</h4>
+            <div class="customer">
+
+             <div class="customer-icon">
+             A
+             </div>
+
+            <h3>— Mr. Adeyemi</h3>
+        </div>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Very honest and reliable. They advised me to buy quality products
+                instead of cheap ones that wouldn't last. I'm happy I listened."
+            </p>
+
+            <h4>★★★★★</h4>
+            <div class="customer">
+
+            <div class="customer-icon">
+              A
+            </div>
+            <h3>— Mrs. Adebayo</h3>
+        </div>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Excellent customer service and professional installation.
+                My business now enjoys uninterrupted power."
+            </p>
+
+            <h4>★★★★★</h4>
+            <div class="customer">
+
+           <div class="customer-icon">
+           A
+           </div>
+
+            <h3>— Mr. Samuel</h3>
+        </div>
+        </div>
+        
+   </div>
+
+</section>
+<section id="contact" class="contact-cta">
+
+   <h2>Need Reliable <span>Power Solutions?</span></h2>
+
+<p>
+Contact AYODOUBLE today for professional solar installation,
+electrical services and free site assessment.
+</p>
+
+    <div class="contact-container">
+
+        <div class="contact-box">
+            <h3>📞 Phone</h3>
+            <p>+2348066253620</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📧 Email</h3>
+            <p>oyeyemiayokola@gmail.com</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📍 Location</h3>
+            <p>Nigeria</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>🕒 Business Hours</h3>
+            <p>Monday - Saturday<br>8:00 AM - 6:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="cta-buttons">
+
+        <a href="tel:+2348066253620" class="call-btn">
+            📞 Call Now
+        </a>
+
+        <a href="https://wa.me/2348066253620" class="whatsapp-btn">
+            💬 WhatsApp Us
+        </a>
+
+    </div>
+
+</section>
+<a href="https://wa.me/2348066253620"
+class="floating-whatsapp"
+target="_blank">
+
+💬
+
+</a>
+            <!-- Free Quote Section -->
+
+<section id="quote" class="quote">
+
+    <h2>Request a Free Quote</h2>
+
+    <p>Fill in the form below and we'll contact you as soon as possible.</p>
+
+    <form id="quoteForm"
+      action="https://formsubmit.co/oyeyemiayokola@gmail.com"
+      method="POST">
+
+        <input type="text" id="name" placeholder="Your Full Name" required>
+
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+
+        <input type="email" id="email" placeholder="Email Address">
+
+        <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+
+        <button type="submit">Request Free Quote</button>
+        <input type="hidden" name="_subject" value="New Quote Request from AYODOUBLE Website">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_template" value="table">
+
+    </form>
+
+</section>
+<footer class="footer">
+
+    <h2>AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS</h2>
+
+    <p>Powering Homes. Empowering Businesses. Built on Trust.</p>
+
+    <div class="footer-info">
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 08066253620</p>
+            <p>📧 oyeyemiayokola@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Business Hours</h3>
+            <p>Monday - Saturday</p>
+            <p>8:00 AM - 6:00 PM</p>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <a href="#">Facebook</a><br>
+            <a href="#">Instagram</a><br>
+            <a href="https://wa.me/2348066253620">WhatsApp</a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p>&copy; 2026 AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS. All Rights Reserved.</p>
+
+</footer>
+   
+<a href="https://wa.me/2348066253620"
+class="floating-whatsapp"
+target="_blank">
+💬
+</a>
+<button id="topBtn" onclick="scrollToTop()">
+    ↑
+</button>
+        <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<div class="floating-quote">
+
+<a href="https://wa.me/2348066253620?text=Hello%20AYODOUBLE.%20I%20would%20like%20to%20book%20a%20FREE%20site%20inspection.">
+
+📍 FREE SITE SURVEY
+
+</a>
+
+</div>
+</body>
+</html>
