@@ -206,8 +206,8 @@ I used your Solar Calculator and I would like a quotation.
 `;
 
 }, 1000);
-;
 
+});
 
 function changeValue(id, change){
 
