@@ -206,34 +206,7 @@ I used your Solar Calculator and I would like a quotation.
 `;
 
 }, 1000);
-// PDF Download Button
-document.getElementById("downloadPDF").addEventListener("click", function () {
-
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    // ===== Header =====
-    doc.setFillColor(11,31,58);
-    doc.rect(0,0,210,30,"F");
-
-    doc.setTextColor(255,215,0);
-    doc.setFont("helvetica","bold");
-    doc.setFontSize(20);
-    doc.text("AYODOUBLE",105,14,{align:"center"});
-
-    doc.setFontSize(11);
-    doc.text("Electrical & Solar Energy Solutions",105,22,{align:"center"});
-
-    // ===== Date =====
-    const today = new Date().toLocaleDateString();
-    const quoteNo = "AYO-" + Date.now().toString().slice(-6);
-
-    doc.setTextColor(0,0,0);
-    doc.setFont("helvetica","normal");
-    doc.setFontSize(11);
-
-    doc.text("Date: " + today,15,40);
-    doc.text("Quotation No: " + quoteNo,15,48);
+;
 
     // ===== Title =====
     doc.setFont("helvetica","bold");
