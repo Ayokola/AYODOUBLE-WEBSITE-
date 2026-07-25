@@ -1030,3 +1030,161 @@ font-size:2rem;
 }
 
 }
+/* ===========================
+   Contact CTA Section
+=========================== */
+
+.contact-cta{
+
+padding:90px 20px;
+
+background:
+linear-gradient(
+135deg,
+#003366,
+#001a33
+);
+
+color:white;
+
+text-align:center;
+
+}
+
+
+.contact-cta h2{
+
+font-size:2.7rem;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+
+.contact-cta h2 span{
+
+color:#FFD700;
+
+}
+
+
+.contact-cta p{
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+max-width:750px;
+
+margin:0 auto 35px;
+
+}
+
+
+/* CTA Buttons */
+
+.cta-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.cta-btn{
+
+padding:16px 35px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+.call-btn{
+
+background:#FFD700;
+
+color:#003366;
+
+}
+
+
+.whatsapp-btn{
+
+background:#25D366;
+
+color:white;
+
+}
+
+
+.cta-btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* Contact Information */
+
+.contact-info{
+
+margin-top:45px;
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+
+.contact-info div{
+
+font-size:1rem;
+
+}
+
+
+.contact-info strong{
+
+color:#FFD700;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.contact-cta h2{
+
+font-size:2rem;
+
+}
+
+
+.contact-info{
+
+gap:20px;
+
+}
+
+}
