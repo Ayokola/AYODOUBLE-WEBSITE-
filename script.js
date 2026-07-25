@@ -231,13 +231,13 @@ counters.forEach(counter => {
 
         const target = +counter.getAttribute("data-target");
 
-       const current = parseInt(counter.innerText) || 0;
+      const current = parseInt(counter.textContent) || 0;
 
         const increment = Math.ceil(target / 100);
 
         if(current < target){
 
-            counter.innerText = current + increment;
+            counter.textContent = current + increment;
 
             setTimeout(updateCounter,20);
 
