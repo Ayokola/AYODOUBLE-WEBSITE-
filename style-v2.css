@@ -445,3 +445,141 @@ padding:25px 20px;
 }
 
 }
+/* ===========================
+   About Company Section
+=========================== */
+
+.about{
+
+padding:90px 20px;
+
+background:white;
+
+}
+
+
+.about-container{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+gap:50px;
+
+}
+
+
+.about-image{
+
+flex:1;
+
+}
+
+
+.about-image img{
+
+width:100%;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+.about-content{
+
+flex:1;
+
+}
+
+
+.about-content h2{
+
+font-size:2.5rem;
+
+color:#003366;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+
+.about-content h2 span{
+
+color:#FFD700;
+
+}
+
+
+.about-content p{
+
+font-size:1.05rem;
+
+line-height:1.9;
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+
+.about-list{
+
+list-style:none;
+
+padding:0;
+
+}
+
+
+.about-list li{
+
+margin-bottom:15px;
+
+font-weight:600;
+
+color:#003366;
+
+}
+
+
+.about-list li::before{
+
+content:"✓";
+
+color:#FFD700;
+
+font-size:20px;
+
+margin-right:10px;
+
+}
+
+
+
+/* About Mobile */
+
+@media(max-width:768px){
+
+.about-container{
+
+flex-direction:column;
+
+}
+
+
+.about-content h2{
+
+font-size:2rem;
+
+}
+
+}
