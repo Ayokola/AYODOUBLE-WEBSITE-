@@ -96,3 +96,70 @@
 .gallery-item:hover img{
     transform:scale(1.08);
 }
+/* ===========================
+   Floating Site Survey Button
+=========================== */
+
+.floating-quote{
+
+position:fixed;
+
+left:20px;
+
+bottom:25px;
+
+z-index:999;
+
+}
+
+.floating-quote a{
+
+display:inline-block;
+
+background:#FFD700;
+
+color:#003366;
+
+padding:15px 22px;
+
+border-radius:40px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
+animation:pulse 2s infinite;
+
+}
+
+.floating-quote a:hover{
+
+transform:translateY(-5px);
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(255,215,0,.5);
+
+}
+
+70%{
+
+box-shadow:0 0 0 15px rgba(255,215,0,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(255,215,0,0);
+
+}
+
+}
