@@ -12,3 +12,49 @@
     opacity:1;
     transform:translateY(0);
 }
+/* ===========================
+   SOLAR PACKAGES
+=========================== */
+
+.packages{
+    padding:80px 8%;
+    background:#f8f9fb;
+    text-align:center;
+}
+
+.package-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.package-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.package-card:hover{
+    transform:translateY(-12px);
+}
+
+.package-card h3{
+    color:#003366;
+}
+
+.package-card p{
+    text-align:left;
+    margin:12px 0;
+}
+
+.featured{
+    border:4px solid #FFD700;
+    transform:scale(1.05);
+}
+
+.featured:hover{
+    transform:scale(1.08);
+}
