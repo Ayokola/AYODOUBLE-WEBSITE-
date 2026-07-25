@@ -1,32 +1,5 @@
 // AYODOUBLE Website JavaScript
 
-function animateCounter(id, endValue, speed) {
-
-    let element = document.getElementById(id);
-
-    let count = 0;
-
-    let counter = setInterval(function () {
-
-        count++;
-
-        element.innerHTML = count + "+";
-
-        if (count >= endValue) {
-
-            clearInterval(counter);
-
-        }
-
-    }, speed);
-
-}
-
-animateCounter("project-count", 300, 20);
-
-animateCounter("customers", 290, 25);
-
-animateCounter("experience", 5, 300);
 function toggleMenu(){
 
     let menu = document.getElementById("nav-links");
@@ -190,7 +163,7 @@ setTimeout(function(){
     document.getElementById("result").style.display = "block";
 
     document.getElementById("result").innerHTML = `
-    document.getElementById("downloadPDF").addEventListener(...)
+    
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -319,7 +292,7 @@ counters.forEach(counter => {
 
         const target = +counter.getAttribute("data-target");
 
-        const current = +counter.innerText;
+       const current = parseInt(counter.innerText) || 0;
 
         const increment = Math.ceil(target / 100);
 
@@ -331,7 +304,7 @@ counters.forEach(counter => {
 
         }else{
 
-            counter.innerText = target + "+";
+           counter.textContent = target + "+";
 
         }
 
