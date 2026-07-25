@@ -58,3 +58,41 @@
 .featured:hover{
     transform:scale(1.08);
 }
+/* ===========================
+   PROJECT GALLERY
+=========================== */
+
+.gallery{
+    padding:80px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.gallery h2{
+    color:#003366;
+    margin-bottom:15px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.gallery-item img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
