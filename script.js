@@ -220,7 +220,15 @@ document.getElementById("result").innerHTML = `
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
+<hr>
 
+<p><strong>👤 Customer:</strong> ${customerName || "Not Provided"}</p>
+
+<p><strong>📞 Phone:</strong> ${customerPhone || "Not Provided"}</p>
+
+<p><strong>📧 Email:</strong> ${customerEmail || "Not Provided"}</p>
+
+<hr>
 <p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
 
 <p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
