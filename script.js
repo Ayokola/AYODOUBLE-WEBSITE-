@@ -276,7 +276,21 @@ Please send me a detailed quotation.`
 </div>
 `;
     
-      
+ document.getElementById("downloadPDF").onclick = function () {
+
+    generatePDF(
+        totalWatts,
+        inverter,
+        battery,
+        panels,
+        dailyEnergy,
+        price,
+        customerName,
+        customerPhone,
+        customerEmail
+    );
+
+};
 
 },1000);
 }
