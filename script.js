@@ -126,12 +126,19 @@ function changeValue(id, change) {
 
     const input = document.getElementById(id);
 
-    let value = parseInt(input.value) || 0;
+    if (!input) return;
+
+    let value = Number(input.value);
+
+    if (isNaN(value)) {
+        value = 0;
+    }
 
     value += change;
 
-    if (value < 0) value = 0;
+    if (value < 0) {
+        value = 0;
+    }
 
     input.value = value;
-
 }
