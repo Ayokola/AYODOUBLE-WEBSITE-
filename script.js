@@ -392,3 +392,14 @@ doc.text("Thank you for choosing AYODOUBLE.", 20, 288);
 
 },1000);
 }
+// ===============================
+// PDF GENERATOR
+// ===============================
+
+function generatePDF(totalWatts, inverter, battery, panels, dailyEnergy, price, customerName, customerPhone, customerEmail) {
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+
+}
