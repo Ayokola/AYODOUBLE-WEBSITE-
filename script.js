@@ -359,19 +359,31 @@ doc.text("Estimated Cost:", 20, y);
 doc.text(price, 100, y);
 
         
-    // Footer
-    doc.setDrawColor(180);
-doc.line(20,250,190,250);
+    // ===============================
+// FOOTER
+// ===============================
+
+doc.setDrawColor(180);
+doc.line(20, 245, 190, 245);
+
+doc.setFont("helvetica", "bold");
+doc.setFontSize(12);
+doc.text("Prepared By", 20, 255);
+
+doc.setFont("helvetica", "normal");
+doc.setFontSize(11);
+doc.text("AYODOUBLE ELECTRICAL & SOLAR ENERGY SOLUTIONS", 20, 263);
+
+doc.line(20, 272, 90, 272);
 
 doc.setFontSize(10);
+doc.text("Authorized Representative", 20, 278);
 
-doc.text("AYODOUBLE ELECTRICAL & SOLAR ENERGY SOLUTIONS",20,260);
+doc.text("Phone: +234 806 625 3620", 120, 255);
+doc.text("Email: oyeyemiayokola@gmail.com", 120, 263);
 
-doc.text("Phone: +234 806 625 3620",20,267);
-
-doc.text("Email: oyeyemiayokola@gmail.com",20,274);
-
-doc.text("Thank you for choosing AYODOUBLE.",20,282);
+doc.setFont("helvetica", "italic");
+doc.text("Thank you for choosing AYODOUBLE.", 20, 288);
 
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
 };
