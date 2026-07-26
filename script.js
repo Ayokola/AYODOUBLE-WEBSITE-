@@ -274,7 +274,7 @@ logo.src = "logo.png";
 
 logo.onload = function () {
 
-    doc.addImage(logo, "PNG", 15, 10, 30, 30);
+    doc.addImage(logo, "PNG", 10, 8, 45, 45);
 
     const today = new Date().toLocaleDateString();
 
@@ -284,6 +284,10 @@ logo.onload = function () {
     doc.setFont("helvetica", "bold");
     doc.setFontSize(22);
     doc.text("AYODOUBLE", 105, 20, { align: "center" });
+   
+    doc.setDrawColor(0, 51, 102);
+doc.setLineWidth(1);
+doc.line(15, 55, 195, 55);
 
     doc.setFontSize(12);
     doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
@@ -300,10 +304,11 @@ doc.setFontSize(16);
 
 doc.setFont("helvetica","bold");
 
-doc.text("SOLAR SYSTEM ESTIMATE",20,65);
+doc.setFontSize(18);
+doc.text("SOLAR SYSTEM ESTIMATE", 20, 72);
 
-    doc.setFontSize(11);
-    doc.text("Date: " + today, 20, 60);
+doc.setFontSize(11);
+doc.text("Date: " + today, 20, 80);
 
     // Estimate
     doc.setFontSize(12);
