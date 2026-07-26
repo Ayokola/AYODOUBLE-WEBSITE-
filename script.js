@@ -87,6 +87,7 @@ const counterObserver = new IntersectionObserver((entries) => {
         }
 
     });
+}
 
 });
 
