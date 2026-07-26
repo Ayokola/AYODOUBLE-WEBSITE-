@@ -147,6 +147,7 @@ if (calculateBtn) {
 
 }
 function calculateSolar() {
+    document.getElementById("loading").style.display = "block";
 
     const bulbs = Number(document.getElementById("bulbs").value);
     const fans = Number(document.getElementById("fans").value);
@@ -207,7 +208,12 @@ if (totalWatts <= 800) {
 const dailyEnergy = (totalWatts * hours) / 1000;
 const panels = Math.ceil(dailyEnergy / 2.5);
 
-document.getElementById("result").innerHTML = `
+setTimeout(() => {
+
+    document.getElementById("loading").style.display = "none";
+
+    document.getElementById("result").innerHTML = `
+
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -225,5 +231,8 @@ document.getElementById("result").innerHTML = `
 <p><strong>💰 Estimated Cost:</strong> ${price}</p>
 
 </div>
+
 `;
+
+},1000);
 }
