@@ -286,9 +286,6 @@ const quoteNumber =
     "-" +
     Math.floor(1000 + Math.random() * 9000);
 
-doc.text("Date: " + today, 20, 75);
-doc.text("Quotation No: " + quoteNumber, 20, 83);
-   
         
     doc.setFont("helvetica", "bold");
     doc.setFontSize(22);
@@ -318,6 +315,7 @@ doc.text("SOLAR SYSTEM ESTIMATE", 20, 65);
 
 doc.setFontSize(11);
 doc.text("Date: " + today, 20, 75);
+doc.text("Quotation No: " + quoteNumber, 20, 83);
 
 
 let y = 90;
