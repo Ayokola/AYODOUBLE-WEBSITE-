@@ -286,12 +286,9 @@ Date.now().toString().slice(-6);
 doc.rect(0,0,210,40,"F");
 
 doc.setTextColor(255,255,255);
-logo.onload = function () {
 
-    // Logo
-    doc.addImage(logo, "PNG", 20, 10, 25, 25);
 
-    doc.setFont("helvetica", "bold");
+doc.setFont("helvetica", "bold");
 doc.setFontSize(24);
 doc.text("AYODOUBLE", 115, 20, { align: "center" });
 
@@ -367,7 +364,7 @@ doc.text("Thank you for choosing AYODOUBLE.",20,282);
 
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
 };
-};
+
 });
 
 },1000);
