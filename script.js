@@ -192,34 +192,7 @@ function calculateSolar() {
    let inverter = "";
 let battery = "";
 let price = "";
-document.getElementById("loading").style.display = "block";
-setTimeout(() => {
-
-    document.getElementById("loading").style.display = "none";
-
-    document.getElementById("result").innerHTML = `
-
-<div class="result-card">
-
-<h3>☀️ Solar Estimate</h3>
-
-<p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
-
-<p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
-
-<p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
-
-<p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
-
-<p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
-
-<p><strong>💰 Estimated Cost:</strong> ${price}</p>
-
-</div>
-
-`;
-
-},1000);
+    
 if (totalWatts <= 800) {
     inverter = "1kVA Pure Sine Wave";
     battery = "24V 100Ah Lithium";
@@ -241,23 +214,32 @@ if (totalWatts <= 800) {
 const dailyEnergy = (totalWatts * hours) / 1000;
 const panels = Math.ceil(dailyEnergy / 2.5);
 
-document.getElementById("result").innerHTML = `
-<div class="result-card">
+document.getElementById("loading").style.display = "block";
 
-<h3>☀️ Solar Estimate</h3>
+setTimeout(() => {
 
-<p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
+    document.getElementById("loading").style.display = "none";
 
-<p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
+    document.getElementById("result").innerHTML = `
+    <div class="result-card">
 
-<p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
+        <h3>☀️ Solar Estimate</h3>
 
-<p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
+        <p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
 
-<p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+        <p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
 
-<p><strong>💰 Estimated Cost:</strong> ${price}</p>
+        <p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
 
-</div>
-`;
+        <p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
+
+        <p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+
+        <p><strong>💰 Estimated Cost:</strong> ${price}</p>
+
+    </div>
+    `;
+
+}, 1000);
+
 }
