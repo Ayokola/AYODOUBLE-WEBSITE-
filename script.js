@@ -93,3 +93,45 @@ const counterObserver = new IntersectionObserver((entries) => {
 counters.forEach(counter => {
     counterObserver.observe(counter);
 });
+// ===============================
+// SOLAR CALCULATOR
+// ===============================
+
+const openCalculator = document.getElementById("openCalculator");
+const calculatorContent = document.getElementById("calculatorContent");
+
+if (openCalculator && calculatorContent) {
+
+    openCalculator.addEventListener("click", () => {
+
+        if (
+            calculatorContent.style.display === "none" ||
+            calculatorContent.style.display === ""
+        ) {
+
+            calculatorContent.style.display = "block";
+            openCalculator.textContent = "❌ Close Calculator";
+
+        } else {
+
+            calculatorContent.style.display = "none";
+            openCalculator.textContent = "🚀 Start Calculator";
+
+        }
+
+    });
+
+}
+function changeValue(id, change) {
+
+    const input = document.getElementById(id);
+
+    let value = parseInt(input.value) || 0;
+
+    value += change;
+
+    if (value < 0) value = 0;
+
+    input.value = value;
+
+}
