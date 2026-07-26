@@ -264,6 +264,51 @@ Please send me a detailed quotation.`
 
 </div>
 `;
+    document.getElementById("downloadPDF").addEventListener("click", function () {
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const today = new Date().toLocaleDateString();
+
+    // Company Header
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(22);
+    doc.text("AYODOUBLE", 105, 20, { align: "center" });
+
+    doc.setFontSize(12);
+    doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
+
+    doc.setDrawColor(0, 51, 102);
+    doc.setLineWidth(0.8);
+    doc.line(20, 35, 190, 35);
+
+    // Title
+    doc.setFontSize(16);
+    doc.text("Solar System Estimate", 20, 50);
+
+    doc.setFontSize(11);
+    doc.text("Date: " + today, 20, 60);
+
+    // Estimate
+    doc.text("Total Load: " + totalWatts + " W", 20, 75);
+    doc.text("Recommended Inverter: " + inverter, 20, 87);
+    doc.text("Battery: " + battery, 20, 99);
+    doc.text("550W Solar Panels: " + panels, 20, 111);
+    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day", 20, 123);
+    doc.text("Estimated Cost: " + price, 20, 135);
+
+    // Footer
+    doc.line(20, 150, 190, 150);
+
+    doc.setFontSize(11);
+    doc.text("AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS", 20, 165);
+    doc.text("Phone: 08066253620", 20, 175);
+    doc.text("Email: oyeyemiayokola@gmail.com", 20, 185);
+
+    doc.save("AYODOUBLE-Solar-Estimate.pdf");
+
+});
 
 },1000);
 }
