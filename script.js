@@ -307,7 +307,7 @@ doc.text("SOLAR SYSTEM ESTIMATE", 20, 65);
 
 doc.setFontSize(11);
 doc.text("Date: " + today, 20, 75);
-doc.text("Quotation No: " + quoteNumber, 20, 83);
+
 
 let y = 90;
 
