@@ -149,6 +149,9 @@ if (calculateBtn) {
 
 }
 function calculateSolar() {
+   const customerName = document.getElementById("customerName").value.trim();
+const customerPhone = document.getElementById("customerPhone").value.trim();
+   const customerEmail = document.getElementById("customerEmail").value.trim();
 
     const bulbs = Number(document.getElementById("bulbs").value);
     const fans = Number(document.getElementById("fans").value);
