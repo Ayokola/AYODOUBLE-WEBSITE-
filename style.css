@@ -1100,3 +1100,92 @@ img{
     font-size:18px;
     font-weight:bold;
 }
+.result-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-top:25px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    border-left:6px solid #FFD700;
+
+    animation:fadeUp .6s ease;
+
+}
+
+.result-card h3{
+
+    color:#0B1F3A;
+
+    margin-bottom:20px;
+
+}
+
+.result-card p{
+
+    margin:12px 0;
+
+    font-size:17px;
+
+}
+
+.loading-box{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.spinner{
+
+    width:55px;
+
+    height:55px;
+
+    border:6px solid #eee;
+
+    border-top:6px solid #FFD700;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
