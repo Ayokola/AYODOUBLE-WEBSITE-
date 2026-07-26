@@ -1379,3 +1379,39 @@ justify-content:center;
 }
 
 }
+/* ===========================
+   CUSTOMER INFORMATION
+=========================== */
+
+.customer-info{
+    background:#ffffff;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-left:6px solid #FFD700;
+}
+
+.customer-info h3{
+    color:#003366;
+    margin-bottom:20px;
+    font-size:22px;
+    text-align:center;
+}
+
+.customer-info input{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:15px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+.customer-info input:focus{
+    outline:none;
+    border-color:#FFD700;
+    box-shadow:0 0 10px rgba(255,215,0,.35);
+}
