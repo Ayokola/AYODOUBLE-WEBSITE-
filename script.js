@@ -331,13 +331,12 @@ doc.text(String(panels),95,y);
 y += 12;
 
 doc.text("Daily Energy:",20,y);
-doc.text(dailyEnergy.toFixed(2)+" kWh/day",95,y);
+doc.text(dailyEnergy.toFixed(2) + " kWh/day",95,y);
 
-y += 12;
+y += 20;
 
-
-        
-doc.text("Estimated Cost: ₦" + price, 20, 130);
+doc.text("Estimated Cost:",20,y);
+doc.text(price,95,y);
 
         
     // Footer
