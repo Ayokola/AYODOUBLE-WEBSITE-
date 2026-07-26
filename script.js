@@ -244,7 +244,6 @@ setTimeout(() => {
     });
 
 }, 100);
-    });
 
     document.getElementById("loading").style.display = "none";
 
