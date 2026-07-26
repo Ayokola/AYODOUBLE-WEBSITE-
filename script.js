@@ -293,7 +293,8 @@ Please send me a detailed quotation.`
 </a>
 
 </div>
-`;document.getElementById("result").innerHTML = `
+`;
+ document.getElementById("result").innerHTML = `
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
