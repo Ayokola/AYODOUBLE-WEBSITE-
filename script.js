@@ -398,8 +398,115 @@ doc.text("Thank you for choosing AYODOUBLE.", 20, 288);
 
 function generatePDF(totalWatts, inverter, battery, panels, dailyEnergy, price, customerName, customerPhone, customerEmail) {
 
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+        const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+
+const logo = new Image();
+logo.src = "logo.png";
+
+logo.onload = function () {
+
+    doc.addImage(logo, "PNG", 10, 8, 45, 45);
+
+    const today = new Date().toLocaleDateString();
+
+const quoteNumber =
+    "AYO-" +
+    new Date().getFullYear() +
+    (new Date().getMonth() + 1).toString().padStart(2, "0") +
+    new Date().getDate().toString().padStart(2, "0") +
+    "-" +
+    Math.floor(1000 + Math.random() * 9000);
+
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(22);
+    doc.text("AYODOUBLE", 105, 20, { align: "center" });
+
+    doc.setDrawColor(0, 51, 102);
+doc.setLineWidth(1);
+doc.line(15, 55, 195, 55);
+
+    doc.setFontSize(12);
+    doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
+
+doc.setTextColor(0,0,0);
+
+    // Title
+    doc.setFontSize(16);
+    doc.setFontSize(16);
+
+doc.setFont("helvetica","bold");
+
+doc.setFontSize(16);
+
+doc.setFont("helvetica","bold");
+
+doc.setFontSize(18);
+doc.text("SOLAR SYSTEM ESTIMATE", 20, 65);
+
+doc.setFontSize(11);
+doc.text("Date: " + today, 20, 75);
+doc.text("Quotation No: " + quoteNumber, 20, 83);
+
+
+doc.text("Customer: " + (customerName || "Not Provided"), 20, 91);
+doc.text("Phone: " + (customerPhone || "Not Provided"), 20, 99);
+doc.text("Email: " + (customerEmail || "Not Provided"), 20, 107);
+
+let y = 122;
+
+doc.text("Total Load:", 20, y);
+doc.text(totalWatts + " W", 100, y);
+
+y += 20;
+doc.text("Recommended Inverter:", 20, y);
+doc.text(inverter, 100, y);
+
+y += 20;
+doc.text("Battery:", 20, y);
+doc.text(battery, 100, y);
+
+y += 20;
+doc.text("Solar Panels:", 20, y);
+doc.text(String(panels), 100, y);
+
+y += 20;
+doc.text("Daily Energy:", 20, y);
+doc.text(dailyEnergy.toFixed(2) + " kWh/day", 100, y);
+
+y += 20;
+doc.text("Estimated Cost:", 20, y);
+doc.text(price, 100, y);
+
+
+    // ===============================
+// FOOTER
+// ===============================
+
+doc.setDrawColor(180);
+doc.line(20, 245, 190, 245);
+
+doc.setFont("helvetica", "bold");
+doc.setFontSize(12);
+doc.text("Prepared By", 20, 255);
+
+doc.setFont("helvetica", "normal");
+doc.setFontSize(11);
+doc.text("AYODOUBLE ELECTRICAL & SOLAR ENERGY SOLUTIONS", 20, 263);
+
+doc.line(20, 272, 90, 272);
+
+doc.setFontSize(10);
+doc.text("Authorized Representative", 20, 278);
+
+doc.text("Phone: +234 806 625 3620", 120, 255);
+doc.text("Email: oyeyemiayokola@gmail.com", 120, 263);
+
+doc.setFont("helvetica", "italic");
+doc.text("Thank you for choosing AYODOUBLE.", 20, 288);
+
+    doc.save("AYODOUBLE-Solar-Estimate.pdf");
 
 
 }
