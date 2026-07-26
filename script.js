@@ -410,5 +410,6 @@ doc.text("Thank you for choosing AYODOUBLE.", 20, 288);
 
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
 
+};
 
 }
