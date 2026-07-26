@@ -335,13 +335,6 @@ doc.line(15, 55, 195, 55);
 doc.setTextColor(0,0,0);
 
     // Title
-    doc.setFontSize(16);
-    doc.setFontSize(16);
-
-doc.setFont("helvetica","bold");
-
-doc.setFontSize(16);
-
 doc.setFont("helvetica","bold");
 
 doc.setFontSize(18);
