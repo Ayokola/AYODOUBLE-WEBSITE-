@@ -23,6 +23,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 });
+}
 
 hiddenElements.forEach((el) => observer.observe(el));
 // ===============================
@@ -218,9 +219,9 @@ document.getElementById("loading").style.display = "block";
 
 setTimeout(() => {
 
-document.getElementById("loading").style.display = "none";
+    document.getElementById("loading").style.display = "none";
 
-document.getElementById("result").innerHTML = `
+    document.getElementById("result").innerHTML = `
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -243,122 +244,44 @@ document.getElementById("result").innerHTML = `
 📄 Download PDF Estimate
 </button>
 
-<br><br>
-
-<a href="https://wa.me/2348066253620?text=${encodeURIComponent(
-`Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
-
-I used your Solar Calculator.
-
-Total Load: ${totalWatts}W
-
-Recommended Inverter: ${inverter}
-
-Battery: ${battery}
-
-Panels: ${panels}
-
-Daily Energy: ${dailyEnergy.toFixed(2)} kWh/day
-
-Estimated Cost: ${price}
-
-Please send me a detailed quotation.`
-)}" target="_blank" class="btn">
-
-💬 Request Full Quotation
-
-</a>
-
 </div>
 `;
-<h3>☀️ Solar Estimate</h3>
 
-<p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
+    // JavaScript starts AFTER the template string closes
+    document.getElementById("downloadPDF").addEventListener("click", function () {
 
-<p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        const today = new Date().toLocaleDateString();
 
-<p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(22);
+        doc.text("AYODOUBLE", 105, 20, { align: "center" });
 
-<p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
+        doc.setFontSize(12);
+        doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
 
-<p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+        doc.setDrawColor(0, 51, 102);
+        doc.setLineWidth(0.8);
+        doc.line(20, 35, 190, 35);
 
-<p><strong>💰 Estimated Cost:</strong> ${price}</p>
+        doc.text("Solar System Estimate", 20, 50);
+        doc.text("Date: " + today, 20, 60);
 
-<br>
+        doc.text("Total Load: " + totalWatts + " W", 20, 70);
+        doc.text("Recommended Inverter: " + inverter, 20, 82);
+        doc.text("Battery: " + battery, 20, 94);
+        doc.text("Solar Panels: " + panels, 20, 106);
+        doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day", 20, 118);
+        doc.text("Estimated Cost: " + price, 20, 130);
 
-<button id="downloadPDF" class="btn-secondary">
-📄 Download PDF Estimate
-</button>
+        doc.line(20, 150, 190, 150);
 
-<br><br>
+        doc.text("Phone: 08066253620", 20, 170);
+        doc.text("Email: oyeyemiayokola@gmail.com", 20, 180);
 
-<a href="https://wa.me/2348066253620?text=${encodeURIComponent(
-`Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
+        doc.save("AYODOUBLE-Solar-Quotation.pdf");
 
-I used your Solar Calculator.
+    });
 
-Total Load: ${totalWatts}W
-
-Recommended Inverter: ${inverter}
-
-Battery: ${battery}
-
-Panels: ${panels}
-
-Daily Energy: ${dailyEnergy.toFixed(2)} kWh/day
-
-Estimated Cost: ${price}
-
-Please send me a detailed quotation.`
-)}" target="_blank" class="btn">
-
-💬 Request Full Quotation
-
-</a>
-
-</div>
-`;
-document.getElementById("downloadPDF").addEventListener("click", function () {
-
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    const today = new Date().toLocaleDateString();
-
-  doc.setFont("helvetica","bold");
-doc.setFontSize(22);
-doc.text("AYODOUBLE",105,20,{align:"center"});
-
-doc.setFontSize(12);
-doc.text("Electrical & Solar Energy Solutions",105,28,{align:"center"});
-
-doc.setDrawColor(0,51,102);
-doc.setLineWidth(0.8);
-doc.line(20,35,190,35);
-
-    doc.setFontSize(12);
-    doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
-
-    doc.line(20, 35, 190, 35);
-
-    doc.text("Solar System Estimate", 20, 50);
-    doc.text("Date: " + today,20,60);
-
-    doc.text("Total Load: " + totalWatts + " W", 20, 70);
-    doc.text("Recommended Inverter: " + inverter, 20, 82);
-    doc.text("Battery: " + battery, 20, 94);
-    doc.text("Solar Panels: " + panels, 20, 106);
-    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day", 20, 118);
-    doc.text("Estimated Cost: " + price, 20, 130);
-
-    doc.line(20, 150, 190, 150);
-
-    doc.text("Phone: 08066253620", 20, 170);
-    doc.text("Email: oyeyemiayokola@gmail.com", 20, 180);
-
-   doc.save("AYODOUBLE-Solar-Quotation.pdf");
-
-});
 }, 1000);
-
-}
