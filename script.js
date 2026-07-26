@@ -192,7 +192,34 @@ function calculateSolar() {
    let inverter = "";
 let battery = "";
 let price = "";
+document.getElementById("loading").style.display = "block";
+setTimeout(() => {
 
+    document.getElementById("loading").style.display = "none";
+
+    document.getElementById("result").innerHTML = `
+
+<div class="result-card">
+
+<h3>☀️ Solar Estimate</h3>
+
+<p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
+
+<p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
+
+<p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
+
+<p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
+
+<p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+
+<p><strong>💰 Estimated Cost:</strong> ${price}</p>
+
+</div>
+
+`;
+
+},1000);
 if (totalWatts <= 800) {
     inverter = "1kVA Pure Sine Wave";
     battery = "24V 100Ah Lithium";
