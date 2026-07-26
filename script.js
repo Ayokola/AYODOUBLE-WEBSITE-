@@ -285,8 +285,7 @@ logo.onload = function () {
     "-" +
     Math.floor(1000 + Math.random() * 9000);
     const quoteNumber =
-        "AYO-" + Date.now().toString().slice(-6);
-
+        
     doc.setFont("helvetica", "bold");
     doc.setFontSize(22);
     doc.text("AYODOUBLE", 105, 20, { align: "center" });
