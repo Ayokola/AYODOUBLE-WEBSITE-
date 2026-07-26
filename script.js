@@ -147,7 +147,6 @@ if (calculateBtn) {
 
 }
 function calculateSolar() {
-    document.getElementById("loading").style.display = "block";
 
     const bulbs = Number(document.getElementById("bulbs").value);
     const fans = Number(document.getElementById("fans").value);
@@ -183,22 +182,22 @@ function calculateSolar() {
         (ac1hp * 1000) +
         (ac15hp * 1800);
 
-  let inverter = "";
+   let inverter = "";
 let battery = "";
 let price = "";
 
 if (totalWatts <= 800) {
     inverter = "1kVA Pure Sine Wave";
     battery = "24V 100Ah Lithium";
-    price = "₦1,200,000 - ₦1,950,000";
+    price = "₦1,200,000 - ₦1,600,000";
 } else if (totalWatts <= 1500) {
     inverter = "1.5kVA Pure Sine Wave";
     battery = "24V 200Ah Lithium";
-    price = "₦1,950,000 - ₦3,900,000";
+    price = "₦1,800,000 - ₦2,500,000";
 } else if (totalWatts <= 3000) {
     inverter = "3kVA Pure Sine Wave";
     battery = "48V 100Ah Lithium";
-    price = "₦3,500,000 - ₦6,500,000";
+    price = "₦3,000,000 - ₦4,500,000";
 } else {
     inverter = "5kVA or Above";
     battery = "48V 200Ah Lithium";
@@ -210,40 +209,10 @@ const panels = Math.ceil(dailyEnergy / 2.5);
 
 setTimeout(() => {
 
-  document.getElementById("downloadPDF").addEventListener("click", function () {
-
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    doc.setFontSize(22);
-    doc.text("AYODOUBLE", 105, 20, { align: "center" });
-
-    doc.setFontSize(12);
-    doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
-
-    doc.line(20, 35, 190, 35);
-
-    doc.text("Solar System Estimate", 20, 50);
-
-    doc.text("Total Load: " + totalWatts + " W", 20, 70);
-    doc.text("Recommended Inverter: " + inverter, 20, 82);
-    doc.text("Battery: " + battery, 20, 94);
-    doc.text("Solar Panels: " + panels, 20, 106);
-    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day", 20, 118);
-    doc.text("Estimated Cost: " + price, 20, 130);
-
-    doc.line(20, 150, 190, 150);
-
-    doc.text("Phone: 08066253620",20,170);
-    doc.text("Email: oyeyemiayokola@gmail.com",20,180);
-
-    doc.save("AYODOUBLE-Solar-Estimate.pdf");
-
-});
-
     document.getElementById("loading").style.display = "none";
 
-document.getElementById("result").innerHTML = `
+    document.getElementById("result").innerHTML = `
+
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -260,40 +229,10 @@ document.getElementById("result").innerHTML = `
 
 <p><strong>💰 Estimated Cost:</strong> ${price}</p>
 
-<br>
-
-<button id="downloadPDF" class="btn-secondary">
-📄 Download PDF Estimate
-</button>
-
-<br><br>
-
-<a href="https://wa.me/2348066253620?text=${encodeURIComponent(
-`Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
-
-I used your Solar Calculator.
-
-Total Load: ${totalWatts}W
-
-Recommended Inverter: ${inverter}
-
-Battery: ${battery}
-
-Panels: ${panels}
-
-Daily Energy: ${dailyEnergy.toFixed(2)} kWh/day
-
-Estimated Cost: ${price}
-
-Please send me a detailed quotation.`
-)}" target="_blank" class="btn">
-
-💬 Request Full Quotation
-
-</a>
-
 </div>
+
 `;
- 
+
 },1000);
+
 }
