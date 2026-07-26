@@ -267,33 +267,26 @@ Please send me a detailed quotation.`
     document.getElementById("downloadPDF").addEventListener("click", function () {
 
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    const logo = new Image();
-    logo.src = "logo.png";
+const doc = new jsPDF();
 
-    logo.onload = function () {
+const logo = new Image();
+logo.src = "logo.png";
+
+logo.onload = function () {
 
     doc.addImage(logo, "PNG", 15, 10, 30, 30);
 
-    // Continue with the rest of your PDF code
     const today = new Date().toLocaleDateString();
-        const quoteNumber =
-"AYO-" +
-Date.now().toString().slice(-6);
 
-    // Company Header
-    doc.setFillColor(11,31,58);
-doc.rect(0,0,210,40,"F");
+    const quoteNumber =
+        "AYO-" + Date.now().toString().slice(-6);
 
-doc.setTextColor(255,255,255);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(22);
+    doc.text("AYODOUBLE", 105, 20, { align: "center" });
 
-
-doc.setFont("helvetica", "bold");
-doc.setFontSize(24);
-doc.text("AYODOUBLE", 115, 20, { align: "center" });
-
-doc.setFontSize(12);
-doc.text("Electrical & Solar Energy Solutions",105,28,{align:"center"});
+    doc.setFontSize(12);
+    doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
 
 doc.setTextColor(0,0,0);
 
