@@ -123,8 +123,7 @@ if (openCalculator && calculatorContent) {
 
 }
 function changeValue(id, change) {
-    document.getElementById("loading").style.display = "block";
-
+    
     console.log("Button clicked:", id);
 
     const input = document.getElementById(id);
@@ -210,6 +209,7 @@ if (totalWatts <= 800) {
 const dailyEnergy = (totalWatts * hours) / 1000;
 const panels = Math.ceil(dailyEnergy / 2.5);
 
+document.getElementById("loading").style.display = "block";
 setTimeout(() => {
 
     document.getElementById("loading").style.display = "none";
