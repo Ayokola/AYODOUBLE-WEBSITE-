@@ -153,3 +153,41 @@ if (calculateBtn) {
     calculateBtn.addEventListener("click", calculateSolar);
 
 }
+function calculateSolar() {
+
+    const bulbs = Number(document.getElementById("bulbs").value);
+    const fans = Number(document.getElementById("fans").value);
+    const tvs = Number(document.getElementById("tvs").value);
+    const fridge = Number(document.getElementById("fridge").value);
+    const freezer = Number(document.getElementById("freezer").value);
+    const laptop = Number(document.getElementById("laptop").value);
+    const decoder = Number(document.getElementById("decoder").value);
+    const charger = Number(document.getElementById("charger").value);
+    const cctv = Number(document.getElementById("cctv").value);
+    const desktop = Number(document.getElementById("desktop").value);
+    const pump = Number(document.getElementById("pump").value);
+    const washing = Number(document.getElementById("washing").value);
+    const microwave = Number(document.getElementById("microwave").value);
+    const ac1hp = Number(document.getElementById("ac1hp").value);
+    const ac15hp = Number(document.getElementById("ac15hp").value);
+    const hours = Number(document.getElementById("hours").value);
+
+    const totalWatts =
+        (bulbs * 20) +
+        (fans * 80) +
+        (tvs * 150) +
+        (fridge * 180) +
+        (freezer * 280) +
+        (laptop * 90) +
+        (decoder * 25) +
+        (charger * 20) +
+        (cctv * 15) +
+        (desktop * 200) +
+        (pump * 850) +
+        (washing * 600) +
+        (microwave * 1300) +
+        (ac1hp * 1000) +
+        (ac15hp * 1800);
+
+    alert("Total Load: " + totalWatts + " W");
+}
