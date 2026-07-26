@@ -182,5 +182,48 @@ function calculateSolar() {
         (ac1hp * 1000) +
         (ac15hp * 1800);
 
-    alert("Total Load: " + totalWatts + " W");
+  let inverter = "";
+let battery = "";
+let price = "";
+
+if (totalWatts <= 800) {
+    inverter = "1kVA Pure Sine Wave";
+    battery = "24V 100Ah Lithium";
+    price = "₦1,200,000 - ₦1,600,000";
+} else if (totalWatts <= 1500) {
+    inverter = "1.5kVA Pure Sine Wave";
+    battery = "24V 200Ah Lithium";
+    price = "₦1,800,000 - ₦2,500,000";
+} else if (totalWatts <= 3000) {
+    inverter = "3kVA Pure Sine Wave";
+    battery = "48V 100Ah Lithium";
+    price = "₦3,000,000 - ₦4,500,000";
+} else {
+    inverter = "5kVA or Above";
+    battery = "48V 200Ah Lithium";
+    price = "Request a Custom Quote";
+}
+
+const dailyEnergy = (totalWatts * hours) / 1000;
+const panels = Math.ceil(dailyEnergy / 2.5);
+
+document.getElementById("result").innerHTML = `
+<div class="result-card">
+
+<h3>☀️ Solar Estimate</h3>
+
+<p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
+
+<p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
+
+<p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
+
+<p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
+
+<p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+
+<p><strong>💰 Estimated Cost:</strong> ${price}</p>
+
+</div>
+`;
 }
