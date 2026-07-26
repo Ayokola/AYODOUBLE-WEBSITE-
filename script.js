@@ -277,7 +277,18 @@ logo.onload = function () {
     doc.addImage(logo, "PNG", 10, 8, 45, 45);
 
     const today = new Date().toLocaleDateString();
-    "AYO-" + Date.now().toString().slice(-6);
+
+const quoteNumber =
+    "AYO-" +
+    new Date().getFullYear() +
+    (new Date().getMonth() + 1).toString().padStart(2, "0") +
+    new Date().getDate().toString().padStart(2, "0") +
+    "-" +
+    Math.floor(1000 + Math.random() * 9000);
+
+doc.text("Date: " + today, 20, 75);
+doc.text("Quotation No: " + quoteNumber, 20, 83);
+   
         
     doc.setFont("helvetica", "bold");
     doc.setFontSize(22);
