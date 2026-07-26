@@ -329,8 +329,11 @@ doc.text("Date: " + today, 20, 75);
 doc.text("Quotation No: " + quoteNumber, 20, 83);
 
 
+doc.text("Customer: " + (customerName || "Not Provided"), 20, 91);
+doc.text("Phone: " + (customerPhone || "Not Provided"), 20, 99);
+doc.text("Email: " + (customerEmail || "Not Provided"), 20, 107);
 
-let y = 90;
+let y = 122;
 
 doc.text("Total Load:", 20, y);
 doc.text(totalWatts + " W", 100, y);
