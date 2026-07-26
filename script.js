@@ -290,7 +290,7 @@ const quoteNumber =
     doc.setFont("helvetica", "bold");
     doc.setFontSize(22);
     doc.text("AYODOUBLE", 105, 20, { align: "center" });
-   
+   doc.text("Quotation No: " + quoteNumber, 20, 83 { align: "left" });
     doc.setDrawColor(0, 51, 102);
 doc.setLineWidth(1);
 doc.line(15, 55, 195, 55);
@@ -315,7 +315,7 @@ doc.text("SOLAR SYSTEM ESTIMATE", 20, 65);
 
 doc.setFontSize(11);
 doc.text("Date: " + today, 20, 75);
-doc.text("Quotation No: " + quoteNumber, 20, 83);
+
 
 
 let y = 90;
