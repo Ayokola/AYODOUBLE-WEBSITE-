@@ -123,6 +123,7 @@ if (openCalculator && calculatorContent) {
 
 }
 function changeValue(id, change) {
+    document.getElementById("loading").style.display = "block";
 
     console.log("Button clicked:", id);
 
@@ -191,15 +192,15 @@ let price = "";
 if (totalWatts <= 800) {
     inverter = "1kVA Pure Sine Wave";
     battery = "24V 100Ah Lithium";
-    price = "₦1,200,000 - ₦1,600,000";
+    price = "₦1,200,000 - ₦1,950,000";
 } else if (totalWatts <= 1500) {
     inverter = "1.5kVA Pure Sine Wave";
     battery = "24V 200Ah Lithium";
-    price = "₦1,800,000 - ₦2,500,000";
+    price = "₦1,950,000 - ₦3,500,000";
 } else if (totalWatts <= 3000) {
     inverter = "3kVA Pure Sine Wave";
     battery = "48V 100Ah Lithium";
-    price = "₦3,000,000 - ₦4,500,000";
+    price = "₦3,900,000 - ₦6,500,000";
 } else {
     inverter = "5kVA or Above";
     battery = "48V 200Ah Lithium";
@@ -209,7 +210,12 @@ if (totalWatts <= 800) {
 const dailyEnergy = (totalWatts * hours) / 1000;
 const panels = Math.ceil(dailyEnergy / 2.5);
 
-document.getElementById("result").innerHTML = `
+setTimeout(() => {
+
+    document.getElementById("loading").style.display = "none";
+
+    document.getElementById("result").innerHTML = `
+
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -227,5 +233,8 @@ document.getElementById("result").innerHTML = `
 <p><strong>💰 Estimated Cost:</strong> ${price}</p>
 
 </div>
+
 `;
+
+},1000);
 }
