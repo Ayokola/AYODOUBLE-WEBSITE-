@@ -335,8 +335,7 @@ doc.text(dailyEnergy.toFixed(2)+" kWh/day",95,y);
 
 y += 12;
 
-doc.text("Estimated Cost:",20,y);
-doc.text(price,95,y);
+doc.text("Estimated Cost: " + price.replace(/₦/g, "\u20A6"), 20, 130);
 
     // Footer
     doc.setDrawColor(180);
