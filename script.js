@@ -25,3 +25,27 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+// ===============================
+// BACK TO TOP BUTTON
+// ===============================
+
+const topButton = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+
+});
+
+function scrollToTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
