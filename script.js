@@ -305,45 +305,35 @@ doc.setFontSize(16);
 doc.setFont("helvetica","bold");
 
 doc.setFontSize(18);
-doc.text("SOLAR SYSTEM ESTIMATE", 20, 72);
+doc.text("SOLAR SYSTEM ESTIMATE", 20, 65);
 
 doc.setFontSize(11);
-doc.text("Date: " + today, 20, 80);
+doc.text("Date: " + today, 20, 75);
 
-    // Estimate
-    doc.setFontSize(12);
+let y = 90;
 
-doc.setFont("helvetica","normal");
-
-let y = 80;
-
-doc.text("Total Load:",20,y);
-doc.text(totalWatts + " W",95,y);
-
-y += 12;
-
-doc.text("Recommended Inverter:",20,y);
-doc.text(inverter,95,y);
-
-y += 12;
-
-doc.text("Battery:",20,y);
-doc.text(battery,95,y);
-
-y += 12;
-
-doc.text("Solar Panels:",20,y);
-doc.text(String(panels),95,y);
-
-y += 12;
-
-doc.text("Daily Energy:",20,y);
-doc.text(dailyEnergy.toFixed(2) + " kWh/day",95,y);
+doc.text("Total Load:", 20, y);
+doc.text(totalWatts + " W", 100, y);
 
 y += 20;
+doc.text("Recommended Inverter:", 20, y);
+doc.text(inverter, 100, y);
 
-doc.text("Estimated Cost:",20,y);
-doc.text(price,95,y);
+y += 20;
+doc.text("Battery:", 20, y);
+doc.text(battery, 100, y);
+
+y += 20;
+doc.text("Solar Panels:", 20, y);
+doc.text(String(panels), 100, y);
+
+y += 20;
+doc.text("Daily Energy:", 20, y);
+doc.text(dailyEnergy.toFixed(2) + " kWh/day", 100, y);
+
+y += 20;
+doc.text("Estimated Cost:", 20, y);
+doc.text(price, 100, y);
 
         
     // Footer
