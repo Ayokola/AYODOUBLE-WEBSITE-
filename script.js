@@ -243,8 +243,6 @@ setTimeout(() => {
 
 }, 100);
 
-});
-
     document.getElementById("loading").style.display = "none";
 
 document.getElementById("result").innerHTML = `
