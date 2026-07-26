@@ -182,7 +182,7 @@ function calculateSolar() {
         (ac1hp * 1000) +
         (ac15hp * 1800);
 
-   let inverter = "";
+    let inverter = "";
 let battery = "";
 let price = "";
 
@@ -207,12 +207,7 @@ if (totalWatts <= 800) {
 const dailyEnergy = (totalWatts * hours) / 1000;
 const panels = Math.ceil(dailyEnergy / 2.5);
 
-setTimeout(() => {
-
-    document.getElementById("loading").style.display = "none";
-
-    document.getElementById("result").innerHTML = `
-
+document.getElementById("result").innerHTML = `
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -230,9 +225,5 @@ setTimeout(() => {
 <p><strong>💰 Estimated Cost:</strong> ${price}</p>
 
 </div>
-
 `;
-
-},1000);
-
 }
