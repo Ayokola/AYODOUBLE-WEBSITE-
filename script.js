@@ -270,41 +270,87 @@ Please send me a detailed quotation.`
     const doc = new jsPDF();
 
     const today = new Date().toLocaleDateString();
+        const quoteNumber =
+"AYO-" +
+Date.now().toString().slice(-6);
 
     // Company Header
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(22);
-    doc.text("AYODOUBLE", 105, 20, { align: "center" });
+    doc.setFillColor(11,31,58);
+doc.rect(0,0,210,40,"F");
 
-    doc.setFontSize(12);
-    doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
+doc.setTextColor(255,255,255);
+doc.setFont("helvetica","bold");
+doc.setFontSize(24);
+doc.text("AYODOUBLE",105,18,{align:"center"});
 
-    doc.setDrawColor(0, 51, 102);
-    doc.setLineWidth(0.8);
-    doc.line(20, 35, 190, 35);
+doc.setFontSize(12);
+doc.text("Electrical & Solar Energy Solutions",105,28,{align:"center"});
+
+doc.setTextColor(0,0,0);
 
     // Title
     doc.setFontSize(16);
-    doc.text("Solar System Estimate", 20, 50);
+    doc.setFontSize(16);
+
+doc.setFont("helvetica","bold");
+
+doc.setFontSize(16);
+
+doc.setFont("helvetica","bold");
+
+doc.text("SOLAR SYSTEM ESTIMATE",20,65);
 
     doc.setFontSize(11);
     doc.text("Date: " + today, 20, 60);
 
     // Estimate
-    doc.text("Total Load: " + totalWatts + " W", 20, 75);
-    doc.text("Recommended Inverter: " + inverter, 20, 87);
-    doc.text("Battery: " + battery, 20, 99);
-    doc.text("550W Solar Panels: " + panels, 20, 111);
-    doc.text("Daily Energy: " + dailyEnergy.toFixed(2) + " kWh/day", 20, 123);
-    doc.text("Estimated Cost: " + price, 20, 135);
+    doc.setFontSize(12);
+
+doc.setFont("helvetica","normal");
+
+let y = 80;
+
+doc.text("Total Load:",20,y);
+doc.text(totalWatts + " W",95,y);
+
+y += 12;
+
+doc.text("Recommended Inverter:",20,y);
+doc.text(inverter,95,y);
+
+y += 12;
+
+doc.text("Battery:",20,y);
+doc.text(battery,95,y);
+
+y += 12;
+
+doc.text("Solar Panels:",20,y);
+doc.text(String(panels),95,y);
+
+y += 12;
+
+doc.text("Daily Energy:",20,y);
+doc.text(dailyEnergy.toFixed(2)+" kWh/day",95,y);
+
+y += 12;
+
+doc.text("Estimated Cost:",20,y);
+doc.text(price,95,y);
 
     // Footer
-    doc.line(20, 150, 190, 150);
+    doc.setDrawColor(180);
+doc.line(20,250,190,250);
 
-    doc.setFontSize(11);
-    doc.text("AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS", 20, 165);
-    doc.text("Phone: 08066253620", 20, 175);
-    doc.text("Email: oyeyemiayokola@gmail.com", 20, 185);
+doc.setFontSize(10);
+
+doc.text("AYODOUBLE ELECTRICAL & SOLAR ENERGY SOLUTIONS",20,260);
+
+doc.text("Phone: +234 806 625 3620",20,267);
+
+doc.text("Email: oyeyemiayokola@gmail.com",20,274);
+
+doc.text("Thank you for choosing AYODOUBLE.",20,282);
 
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
 
