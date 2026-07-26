@@ -268,7 +268,14 @@ Please send me a detailed quotation.`
 
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
+    const logo = new Image();
+logo.src = "logo.png";
 
+logo.onload = function () {
+
+    doc.addImage(logo, "PNG", 15, 10, 30, 30);
+
+    // Continue with the rest of your PDF code
     const today = new Date().toLocaleDateString();
         const quoteNumber =
 "AYO-" +
@@ -281,7 +288,7 @@ doc.rect(0,0,210,40,"F");
 doc.setTextColor(255,255,255);
 doc.setFont("helvetica","bold");
 doc.setFontSize(24);
-doc.text("AYODOUBLE",105,18,{align:"center"});
+doc.text("AYODOUBLE", 115, 20, { align: "center" });
 
 doc.setFontSize(12);
 doc.text("Electrical & Solar Energy Solutions",105,28,{align:"center"});
@@ -354,6 +361,7 @@ doc.text("Email: oyeyemiayokola@gmail.com",20,274);
 doc.text("Thank you for choosing AYODOUBLE.",20,282);
 
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
+};
 
 });
 
