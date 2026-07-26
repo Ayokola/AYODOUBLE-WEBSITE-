@@ -212,8 +212,7 @@ setTimeout(() => {
 
     document.getElementById("loading").style.display = "none";
 
-    document.getElementById("result").innerHTML = `
-
+document.getElementById("result").innerHTML = `
 <div class="result-card">
 
 <h3>☀️ Solar Estimate</h3>
@@ -230,8 +229,89 @@ setTimeout(() => {
 
 <p><strong>💰 Estimated Cost:</strong> ${price}</p>
 
-</div>
+<br>
 
+<button id="downloadPDF" class="btn-secondary">
+📄 Download PDF Estimate
+</button>
+
+<br><br>
+
+<a href="https://wa.me/2348066253620?text=${encodeURIComponent(
+`Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
+
+I used your Solar Calculator.
+
+Total Load: ${totalWatts}W
+
+Recommended Inverter: ${inverter}
+
+Battery: ${battery}
+
+Panels: ${panels}
+
+Daily Energy: ${dailyEnergy.toFixed(2)} kWh/day
+
+Estimated Cost: ${price}
+
+Please send me a detailed quotation.`
+)}" target="_blank" class="btn">
+
+💬 Request Full Quotation
+
+</a>
+
+</div>
+`;document.getElementById("result").innerHTML = `
+<div class="result-card">
+
+<h3>☀️ Solar Estimate</h3>
+
+<p><strong>⚡ Total Load:</strong> ${totalWatts} W</p>
+
+<p><strong>🔌 Recommended Inverter:</strong> ${inverter}</p>
+
+<p><strong>🔋 Recommended Battery:</strong> ${battery}</p>
+
+<p><strong>☀️ 550W Solar Panels:</strong> ${panels}</p>
+
+<p><strong>⚡ Daily Energy:</strong> ${dailyEnergy.toFixed(2)} kWh/day</p>
+
+<p><strong>💰 Estimated Cost:</strong> ${price}</p>
+
+<br>
+
+<button id="downloadPDF" class="btn-secondary">
+📄 Download PDF Estimate
+</button>
+
+<br><br>
+
+<a href="https://wa.me/2348066253620?text=${encodeURIComponent(
+`Hello AYODOUBLE ELECTRICAL AND SOLAR ENERGY SOLUTIONS.
+
+I used your Solar Calculator.
+
+Total Load: ${totalWatts}W
+
+Recommended Inverter: ${inverter}
+
+Battery: ${battery}
+
+Panels: ${panels}
+
+Daily Energy: ${dailyEnergy.toFixed(2)} kWh/day
+
+Estimated Cost: ${price}
+
+Please send me a detailed quotation.`
+)}" target="_blank" class="btn">
+
+💬 Request Full Quotation
+
+</a>
+
+</div>
 `;
 
 },1000);
