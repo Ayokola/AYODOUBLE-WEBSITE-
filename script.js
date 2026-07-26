@@ -337,7 +337,7 @@ y += 12;
 
 
         
-doc.text(`Estimated Cost: ${price.replace(/₦/g, "\u20A6")}`, 20, 130);
+doc.text("Estimated Cost: ₦" + price, 20, 130);
 
         
     // Footer
