@@ -124,16 +124,21 @@ if (openCalculator && calculatorContent) {
 }
 function changeValue(id, change) {
 
-    console.log("Button clicked:", id);
-
     const input = document.getElementById(id);
 
-    console.log(input);
+    if (!input) return;
 
-    let value = parseInt(input.value);
+    let value = Number(input.value);
 
-    console.log(value);
+    if (isNaN(value)) {
+        value = 0;
+    }
 
-    input.value = value + change;
+    value += change;
 
+    if (value < 0) {
+        value = 0;
+    }
+
+    input.value = value;
 }
