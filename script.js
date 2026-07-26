@@ -269,9 +269,9 @@ Please send me a detailed quotation.`
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     const logo = new Image();
-logo.src = "logo.png";
+    logo.src = "logo.png";
 
-logo.onload = function () {
+    logo.onload = function () {
 
     doc.addImage(logo, "PNG", 15, 10, 30, 30);
 
@@ -286,7 +286,12 @@ Date.now().toString().slice(-6);
 doc.rect(0,0,210,40,"F");
 
 doc.setTextColor(255,255,255);
-doc.setFont("helvetica","bold");
+logo.onload = function () {
+
+    // Logo
+    doc.addImage(logo, "PNG", 20, 10, 25, 25);
+
+    doc.setFont("helvetica", "bold");
 doc.setFontSize(24);
 doc.text("AYODOUBLE", 115, 20, { align: "center" });
 
