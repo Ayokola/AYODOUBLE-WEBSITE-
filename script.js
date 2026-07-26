@@ -240,6 +240,7 @@ setTimeout(() => {
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
 
 });
+    });
 
     document.getElementById("loading").style.display = "none";
 
