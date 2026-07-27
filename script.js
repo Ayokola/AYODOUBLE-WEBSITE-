@@ -395,8 +395,8 @@ doc.line(20, 272, 90, 272);
 doc.setFontSize(10);
 doc.text("Authorized Representative", 20, 278);
 
-doc.text("Phone: +234 806 625 3620", 120, 255);
-doc.text("Email: oyeyemiayokola@gmail.com", 120, 263);
+doc.text("Phone: +234 806 625 3620", 125, 255);
+doc.text("Email: oyeyemiayokola@gmail.com", 125, 263);
 
 doc.setFont("helvetica", "italic");
 doc.text("Thank you for choosing AYODOUBLE.", 20, 288);
