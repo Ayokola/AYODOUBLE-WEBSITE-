@@ -327,10 +327,18 @@ const quoteNumber =
 
     doc.setDrawColor(0, 51, 102);
 doc.setLineWidth(1);
-doc.line(15, 55, 195, 55);
+doc.line(15, 45, 195, 45);
 
     doc.setFontSize(12);
     doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
+    doc.setFont("helvetica", "italic");
+doc.setFontSize(10);
+doc.text(
+    "Powering Homes • Empowering Businesses",
+    105,
+    35,
+    { align: "center" }
+);
 
 doc.setTextColor(0,0,0);
 
