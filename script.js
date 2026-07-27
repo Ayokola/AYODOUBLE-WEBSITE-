@@ -327,7 +327,7 @@ const quoteNumber =
 
     doc.setDrawColor(0, 51, 102);
 doc.setLineWidth(1);
-doc.line(15, 60, 195, 60);
+doc.line(15, 55, 195, 55);
 
     doc.setFontSize(12);
     doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
