@@ -414,12 +414,6 @@ y += 7;
 doc.text("• Final system sizing may change after a physical site survey.", 22, y);
 
 y += 7;
-doc.text("• Installation includes standard workmanship and testing.", 22, y);
-
-y += 7;
-doc.text("• Product warranties are subject to the manufacturer's terms.", 22, y);
-
-y += 7;
 doc.text("• This quotation is valid for 14 days from the issue date.", 22, y); 
 
 
