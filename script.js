@@ -327,7 +327,7 @@ const quoteNumber =
 
     doc.setDrawColor(0, 51, 102);
 doc.setLineWidth(1);
-doc.line(15, 45, 195, 45);
+doc.line(15, 60, 195, 60);
 
     doc.setFontSize(12);
     doc.text("Electrical & Solar Energy Solutions", 105, 28, { align: "center" });
@@ -430,7 +430,7 @@ doc.text("• This quotation is valid for 14 days from the issue date.", 22, y);
 // ===============================
 
 doc.setDrawColor(180);
-doc.line(20, 242, 190, 242);
+doc.line(20, 240, 190, 240);
 
 // Left Side
 doc.setFont("helvetica", "bold");
