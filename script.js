@@ -393,6 +393,34 @@ rows.forEach(row => {
     y += 12;
 
 });
+   // ===============================
+// QUOTATION NOTES
+// ===============================
+
+y += 10;
+
+doc.setFont("helvetica", "bold");
+doc.setFontSize(12);
+doc.text("Quotation Notes", 20, y);
+
+y += 8;
+
+doc.setFont("helvetica", "normal");
+doc.setFontSize(10);
+
+doc.text("• Prices shown are estimated based on the selected electrical load.", 22, y);
+
+y += 7;
+doc.text("• Final system sizing may change after a physical site survey.", 22, y);
+
+y += 7;
+doc.text("• Installation includes standard workmanship and testing.", 22, y);
+
+y += 7;
+doc.text("• Product warranties are subject to the manufacturer's terms.", 22, y);
+
+y += 7;
+doc.text("• This quotation is valid for 14 days from the issue date.", 22, y); 
 
 
 // ===============================
