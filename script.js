@@ -349,30 +349,50 @@ doc.text("Customer: " + (customerName || "Not Provided"), 20, 91);
 doc.text("Phone: " + (customerPhone || "Not Provided"), 20, 99);
 doc.text("Email: " + (customerEmail || "Not Provided"), 20, 107);
 
+// ===============================
+// QUOTATION DETAILS
+// ===============================
+
 let y = 122;
 
-doc.text("Total Load:", 20, y);
-doc.text(totalWatts + " W", 100, y);
+// Header
+doc.setFillColor(11, 31, 58);
+doc.setTextColor(255, 255, 255);
+doc.rect(20, y, 170, 10, "F");
 
-y += 20;
-doc.text("Recommended Inverter:", 20, y);
-doc.text(inverter, 100, y);
+doc.setFont("helvetica", "bold");
+doc.setFontSize(12);
+doc.text("Item", 25, y + 7);
+doc.text("Specification", 95, y + 7);
 
-y += 20;
-doc.text("Battery:", 20, y);
-doc.text(battery, 100, y);
+// Return text to black
+doc.setTextColor(0, 0, 0);
 
-y += 20;
-doc.text("Solar Panels:", 20, y);
-doc.text(String(panels), 100, y);
+y += 10;
 
-y += 20;
-doc.text("Daily Energy:", 20, y);
-doc.text(dailyEnergy.toFixed(2) + " kWh/day", 100, y);
+const rows = [
+    ["Total Load", totalWatts + " W"],
+    ["Recommended Inverter", inverter],
+    ["Battery", battery],
+    ["550W Solar Panels", panels + " Panel(s)"],
+    ["Daily Energy", dailyEnergy.toFixed(2) + " kWh/day"],
+    ["Estimated Cost", price]
+];
 
-y += 20;
-doc.text("Estimated Cost:", 20, y);
-doc.text(price, 100, y);
+rows.forEach(row => {
+
+    doc.rect(20, y, 70, 12);
+    doc.rect(90, y, 100, 12);
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+
+    doc.text(row[0], 23, y + 8);
+    doc.text(String(row[1]), 93, y + 8);
+
+    y += 12;
+
+});
 
 
 // ===============================
