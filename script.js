@@ -434,6 +434,7 @@ doc.text("oyeyemiayokola@gmail.com", 145, 268);
 doc.setFont("helvetica", "italic");
 doc.setFontSize(10);
 doc.text("Thank you for choosing AYODOUBLE.", 20, 290);
+    doc.save("AYODOUBLE-Solar-Estimate.pdf");
 };
 
 }
