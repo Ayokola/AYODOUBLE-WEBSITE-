@@ -433,35 +433,35 @@ doc.line(20, 242, 190, 242);
 // Left Side
 doc.setFont("helvetica", "bold");
 doc.setFontSize(12);
-doc.text("Prepared By", 20, 252);
+doc.text("Prepared By", 20, y + 10);
 
 doc.setFont("helvetica", "normal");
 doc.setFontSize(10);
-doc.text("AYODOUBLE ELECTRICAL", 20, 260);
-doc.text("& SOLAR ENERGY SOLUTIONS", 20, 266);
+doc.text("AYODOUBLE ELECTRICAL", 20, y + 18);
+doc.text("& SOLAR ENERGY SOLUTIONS", 20, y + 24);
 
-doc.line(20, 274, 90, 274);
+doc.line(20, y + 32, 90, y + 32);
 
 doc.setFontSize(9);
-doc.text("Authorized Representative", 20, 280);
+doc.text("Authorized Representative", 20, y + 38);
 
 // Right Side
 doc.setFont("helvetica", "bold");
 doc.setFontSize(12);
-doc.text("Contact", 125, 252);
+doc.text("Contact", 125, y + 10);
 
 doc.setFont("helvetica", "normal");
 doc.setFontSize(10);
-doc.text("Phone:", 125, 260);
-doc.text("+234 806 625 3620", 145, 260);
+doc.text("Phone:", 125, y + 18);
+doc.text("+234 806 625 3620", 145, y + 18);
 
-doc.text("Email:", 125, 268);
-doc.text("oyeyemiayokola@gmail.com", 145, 268);
+doc.text("Email:", 125, y + 26);
+doc.text("oyeyemiayokola@gmail.com", 145, y + 26);
 
 // Thank You
 doc.setFont("helvetica", "italic");
 doc.setFontSize(10);
-doc.text("Thank you for choosing AYODOUBLE.", 20, 290);
+doc.text("Thank you for choosing AYODOUBLE.", 20, y + 48);
     doc.save("AYODOUBLE-Solar-Estimate.pdf");
 };
 
