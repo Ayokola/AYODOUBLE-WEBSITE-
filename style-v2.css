@@ -1438,6 +1438,10 @@ header.sticky{
     z-index: 9999;
     animation: slideDown .35s ease;
 }
+header nav{
+    max-width:1200px;
+    margin:auto;
+}
 
 /* Smooth drop animation */
 
