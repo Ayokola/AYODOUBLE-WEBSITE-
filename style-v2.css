@@ -1418,7 +1418,15 @@ justify-content:center;
 /* ===========================
    Sticky Header
 =========================== */
-
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0b1f3a;
+    z-index: 999;
+    transition: all .35s ease;
+}
 header.sticky{
     position: fixed;
     top: 0;
