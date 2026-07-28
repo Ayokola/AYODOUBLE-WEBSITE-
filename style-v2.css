@@ -1428,10 +1428,6 @@ header{
     transition: all .35s ease;
 }
 header.sticky{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     background: rgba(11,31,58,0.96);
     backdrop-filter: blur(8px);
     box-shadow: 0 6px 18px rgba(0,0,0,.15);
