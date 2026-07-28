@@ -498,6 +498,10 @@ window.addEventListener("scroll", () => {
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeLightbox = document.querySelector(".close-lightbox");
+console.log(lightbox);
+console.log(lightboxImg);
+console.log(closeLightbox);
+console.log(galleryImages.length);
 
 const galleryImages = document.querySelectorAll(
     ".gallery-item img, .project-card img"
