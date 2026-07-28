@@ -490,5 +490,41 @@ window.addEventListener("scroll", () => {
     } else {
         header.classList.remove("sticky");
     }
+// ===============================
+// IMAGE LIGHTBOX
+// ===============================
 
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeLightbox = document.querySelector(".close-lightbox");
+
+const galleryImages = document.querySelectorAll(
+    ".gallery-item img, .project-card img"
+);
+
+galleryImages.forEach(img => {
+
+    img.addEventListener("click", function () {
+
+        lightbox.style.display = "flex";
+        lightboxImg.src = this.src;
+
+    });
+
+});
+
+closeLightbox.addEventListener("click", function () {
+
+    lightbox.style.display = "none";
+
+});
+
+lightbox.addEventListener("click", function (e) {
+
+    if (e.target === lightbox) {
+
+        lightbox.style.display = "none";
+
+    }
+    
 });
