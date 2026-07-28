@@ -490,6 +490,7 @@ window.addEventListener("scroll", () => {
     } else {
         header.classList.remove("sticky");
     }
+    });
 // ===============================
 // IMAGE LIGHTBOX
 // ===============================
