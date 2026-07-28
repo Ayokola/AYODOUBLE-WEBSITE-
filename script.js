@@ -33,14 +33,23 @@ const topButton = document.getElementById("topBtn");
 
 window.addEventListener("scroll", () => {
 
+    // Back To Top Button
     if (document.documentElement.scrollTop > 300) {
         topButton.style.display = "block";
     } else {
         topButton.style.display = "none";
     }
 
-});
+    // Sticky Navigation
+    const navbar = document.querySelector("header");
 
+    if (window.scrollY > 50) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+
+});
 function scrollToTop() {
 
     window.scrollTo({
